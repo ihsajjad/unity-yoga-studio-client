@@ -4,16 +4,18 @@ import NewsSection from "../NewsSection";
 
 const Home = () => {
   return (
-    <>
+    <div>
       {/* About us  */}
       <About />
       {/* Call to action */}
       <CallToAction />
       {/* NewusLetter */}
       <NewsSection />
-      
-    </>
-  )
+      <div>
+        <ClassHighlights />
+      </div>
+    </div>
+  );
 };
 
 export default Home;
