@@ -1,6 +1,6 @@
-import About from "./About";
-import CallToAction from "./CallToAction";
-import NewsSection from "./NewsSection";
+import About from "../About";
+import CallToAction from "../CallToAction";
+import NewsSection from "../NewsSection";
 
 const Home = () => {
   return (
