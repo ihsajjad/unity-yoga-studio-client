@@ -1,5 +1,11 @@
+import ClassHighlights from "../classHighlights/ClassHighlights";
+
 const Home = () => {
-  return <div>This is home page</div>;
+  return (
+    <div>
+      <ClassHighlights />
+    </div>
+  );
 };
 
 export default Home;
