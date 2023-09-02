@@ -1,6 +1,7 @@
 import About from "../About";
 import CallToAction from "../CallToAction";
 import NewsSection from "../NewsSection";
+import ClassHighlights from "../classHighlights/ClassHighlights";
 
 const Home = () => {
   return (
