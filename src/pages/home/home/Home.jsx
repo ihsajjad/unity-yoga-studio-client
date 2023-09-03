@@ -1,6 +1,7 @@
 import About from "../About";
 import CallToAction from "../CallToAction";
 import ClassHighlights from "../ClassHighlights";
+import ContactInfo from "../ContactInfo";
 import Events from "../Events";
 import NewsSection from "../NewsSection";
 import Testimonials from "../Testimonials";
@@ -17,6 +18,8 @@ const Home = () => {
       <ClassHighlights />
       <Testimonials />
       <Events />
+      {/* Contact Information and Map */}
+       <ContactInfo/>
     </div>
   );
 };
