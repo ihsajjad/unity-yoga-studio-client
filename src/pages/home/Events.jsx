@@ -7,6 +7,7 @@ import { useEffect, useState } from "react";
 
 // import required modules
 import { Autoplay, Pagination, Navigation } from "swiper/modules";
+import { Link } from "react-router-dom";
 
 const Events = () => {
   const [events, setEvents] = useState([]);
@@ -21,7 +22,7 @@ const Events = () => {
   }, []);
 
   return (
-    <section className="h-auto bg-[var(--primary-bg)] md:p-10 px-2 py-5">
+    <section className="bg-[var(--primary-bg)] md:p-10 px-2 py-5">
       <h3 className="text-3xl text-center text-[var(--main-color)] font-bold my-5">
         Upcomming Events
       </h3>
@@ -38,11 +39,11 @@ const Events = () => {
         }}
         navigation={true}
         modules={[Autoplay, Pagination, Navigation]}
-        className="mySwiper min-h-screen"
+        className="mySwiper"
       >
         {events.map((event, i) => (
           <SwiperSlide key={i} className="">
-            <div className="relative h-[80vh] w-full overflow-hidden">
+            <div className="relative h-[90vh] w-full overflow-hidden">
               <div className="h-full w-full">
                 <img
                   src={event.image}
@@ -50,13 +51,13 @@ const Events = () => {
                   className="w-full object-cover h-full"
                 />
               </div>
-              <div className="absolute z-10 top-0 left-auto bg-opacity-20 bg-slate-800 h-full w-full flex items-center">
-                <div className="h-fit md:p-10 p-5 md:mx-10 rounded-lg border-[var(--main-color)] bg-opacity-20 text-white space-y-2 bg-gradient-to-r from-[var(--bg-secondary)]">
-                  <h3 className="text-3xl text-[var(--main-color)] font-bold">
-                    {event.title}
+              <div className="absolute z-10 top-0 left-auto bg-opacity-40 bg-slate-800 h-full w-full flex items-center">
+                <div className="h-fit w-1/2 mx-auto md:p-10 p-5  rounded-lg bg-opacity-10 text-white space-y-2 bg-gradient-to-b from-purple-800 text-center">
+                  <h3 className="text-3xl text-[var(--main-color)] font-bold text-center">
+                    {event.name}
                   </h3>
-                  <h3 className="text-xl">{event.subtitle}</h3>
-                  <p className="md:w-1/2 text-justify">{event.description}</p>
+                  <p className=" text-center">{event.description}</p>
+                  <Link to={`/${event.url}`}>View Schedule</Link>
                 </div>
               </div>
             </div>
