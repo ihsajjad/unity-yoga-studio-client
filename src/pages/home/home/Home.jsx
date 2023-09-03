@@ -1,7 +1,9 @@
 import About from "../About";
 import CallToAction from "../CallToAction";
+import ClassHighlights from "../ClassHighlights";
+import Events from "../Events";
 import NewsSection from "../NewsSection";
-import ClassHighlights from "../classHighlights/ClassHighlights";
+import Testimonials from "../Testimonials";
 
 const Home = () => {
   return (
@@ -12,9 +14,9 @@ const Home = () => {
       <CallToAction />
       {/* NewusLetter */}
       <NewsSection />
-      <div>
-        <ClassHighlights />
-      </div>
+      <ClassHighlights />
+      <Testimonials />
+      <Events />
     </div>
   );
 };
