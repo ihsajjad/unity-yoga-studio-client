@@ -21,7 +21,7 @@ const Events = () => {
   }, []);
 
   return (
-    <section className="h-[80vh] bg-[var(--primary-bg)] md:p-10 px-2 py-5">
+    <section className="h-auto bg-[var(--primary-bg)] md:p-10 px-2 py-5">
       <h3 className="text-3xl text-center text-[var(--main-color)] font-bold my-5">
         Upcomming Events
       </h3>
