@@ -30,7 +30,7 @@
     "_id": 2,
     "name": "Vinyasa Flow",
     "description": "Vinyasa is a dynamic and flowing style of yoga that synchronizes breath with movement. It offers a cardiovascular workout while fostering mindfulness.",
-    "img": "https://images.pexels.com/photos/8436587/pexels-photo-8436587.jpeg?auto=compress&cs=tinysrgb&w=600",
+    "img": "https://images.pexels.com/photos/3822356/pexels-photo-3822356.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
     "date": {
       "startDate": "2023-09-10T10:00:00",
       "endDate": "2023-09-10T11:30:00"
@@ -57,7 +57,7 @@
     "_id": 3,
     "name": "Ashtanga Yoga",
     "description": "Ashtanga is a rigorous and structured practice that follows a specific sequence of postures. It builds strength, flexibility, and endurance.",
-    "img": "https://images.pexels.com/photos/8436587/pexels-photo-8436587.jpeg?auto=compress&cs=tinysrgb&w=600",
+    "img": "https://images.pexels.com/photos/864939/pexels-photo-864939.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
     "date": {
       "startDate": "2023-09-10T10:00:00",
       "endDate": "2023-09-10T11:30:00"
@@ -84,7 +84,7 @@
     "_id": 4,
     "name": "Yin Yoga",
     "description": "Yin yoga involves long-held, passive poses to target connective tissues. It is a meditative practice that enhances flexibility and relaxation.",
-    "img": "https://images.pexels.com/photos/8436587/pexels-photo-8436587.jpeg?auto=compress&cs=tinysrgb&w=600",
+    "img": "https://images.pexels.com/photos/3775593/pexels-photo-3775593.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
     "date": {
       "startDate": "2023-09-10T10:00:00",
       "endDate": "2023-09-10T11:30:00"
@@ -111,7 +111,34 @@
     "_id": 5,
     "name": "Meditation and Mindfulness",
     "description": "Explore mindfulness and meditation techniques to calm the mind, reduce stress, and cultivate inner peace.",
-    "img": "https://images.pexels.com/photos/8436587/pexels-photo-8436587.jpeg?auto=compress&cs=tinysrgb&w=600",
+    "img": "https://images.pexels.com/photos/3900844/pexels-photo-3900844.jpeg?auto=compress&cs=tinysrgb&w=600",
+    "date": {
+      "startDate": "2023-09-10T10:00:00",
+      "endDate": "2023-09-10T11:30:00"
+    },
+    "fees": 1499,
+    "duration": 400,
+    "instructorInformation": {},
+    "ratings": 3.5,
+    "reviews": [
+      {
+        "user": "yoga_lover123",
+        "rating": 4,
+        "comment": "I loved this class! Highly recommended for beginners."
+      },
+      {
+        "user": "zen_master22",
+        "rating": 3,
+        "comment": "Great class, but it could be a bit longer."
+      }
+    ],
+    "url": "meditation-and-mindfulness"
+  },
+  {
+    "_id": 6,
+    "name": "Meditation and Mindfulness",
+    "description": "Explore mindfulness and meditation techniques to calm the mind, reduce stress, and cultivate inner peace.",
+    "img": "https://images.pexels.com/photos/8436637/pexels-photo-8436637.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
     "date": {
       "startDate": "2023-09-10T10:00:00",
       "endDate": "2023-09-10T11:30:00"

@@ -1,4 +1,3 @@
-import Navbar from "../../../Shared/Navbar";
 import About from "../About";
 import CallToAction from "../CallToAction";
 import ClassHighlights from "../ClassHighlights";
@@ -10,19 +9,13 @@ import Testimonials from "../Testimonials";
 const Home = () => {
   return (
     <div>
-      {/* Nav Bar */}
-      <Navbar />
-      {/* About us  */}
       <About />
-      {/* Call to action */}
-      <CallToAction />
-      {/* NewusLetter */}
-      <NewsSection />
       <ClassHighlights />
       <Testimonials />
       <Events />
-      {/* Contact Information and Map */}
-       <ContactInfo/>
+      <NewsSection />
+      <CallToAction />
+      <ContactInfo />
     </div>
   );
 };
