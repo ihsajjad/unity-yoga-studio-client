@@ -4,6 +4,7 @@ import CallToAction from "../CallToAction";
 import ClassHighlights from "../ClassHighlights";
 import ContactInfo from "../ContactInfo";
 import Events from "../Events";
+import HeroSection from "../HeroSection";
 import NewsSection from "../NewsSection";
 import Testimonials from "../Testimonials";
 
@@ -12,6 +13,8 @@ const Home = () => {
     <div>
       {/* Nav Bar */}
       <Navbar />
+      {/* Hero Section */}
+      <HeroSection />
       {/* About us  */}
       <About />
       {/* Call to action */}
