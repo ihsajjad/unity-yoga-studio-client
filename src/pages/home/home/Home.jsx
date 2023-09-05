@@ -1,4 +1,5 @@
 import Navbar from "../../../Shared/Navbar";
+import Blog from "../../Blog/Blog";
 import About from "../About";
 import CallToAction from "../CallToAction";
 import ClassHighlights from "../ClassHighlights";
@@ -21,6 +22,7 @@ const Home = () => {
       <ClassHighlights />
       <Testimonials />
       <Events />
+      <Blog/>
       {/* Contact Information and Map */}
        <ContactInfo/>
     </div>
