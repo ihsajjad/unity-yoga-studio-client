@@ -8,6 +8,7 @@ import { useEffect, useState } from "react";
 // import required modules
 import { Autoplay, Pagination, Navigation } from "swiper/modules";
 import { Link } from "react-router-dom";
+import { FaCalendarCheck } from "react-icons/fa";
 
 const Events = () => {
   const [events, setEvents] = useState([]);
@@ -52,15 +53,18 @@ const Events = () => {
               <div className="absolute z-10 top-0 left-auto bg-opacity-0 bg-slate-800 h-full w-full flex items-center">
                 {/* slider content */}
                 <div className="h-fit lg:w-2/4 md:w-3/4 mx-auto md:p-10 p-5 bg-slate-800 bg-opacity-60 text-white text-center flex flex-col space-y-3 relative rounded">
-                  <span className="absolute top-3 right-3  font-bold text-yellow-300 py-1 px-2 rounded">
-                    {event.date}
-                  </span>
                   <h3 className="md:text-4xl text-3xl text-center text-[var(--main-color)] font-bold">
                     {event.name}
                   </h3>
                   <p className="md:text-xl text-center font-bold">
                     {event.description}
                   </p>
+                  <div className="md:absolute top-2 right-3  font-bold text-yellow-300 py-1 px-2 rounded flex items-center gap-1 justify-center">
+                    <span>
+                      <FaCalendarCheck className="text-xl" />
+                    </span>
+                    {event.date}
+                  </div>
                   <div>
                     <Link to={`/${event.url}`} className="custom-btn-primary">
                       View Schedule

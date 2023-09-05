@@ -1,8 +1,6 @@
 /* Custom CSS for the active route */
 .active{
-    background-color: #8bcf17;
-    padding: 4px 10px;
-    border-radius: 5px;
     color: black;
-    font-weight: 500;
+    font-weight: 800;
+    text-decoration: underline;
 }

@@ -7,7 +7,7 @@ const Navbar = () => {
 
     // Nav Options are here
     const navItems = <>
-        <ActiveLink><a className="text-[var(--primary-text)] ">Home</a></ActiveLink>
+        <ActiveLink><a className="text-[var(--primary-text)] ">Home </a></ActiveLink>
         <ActiveLink><a className="text-[var(--primary-text)] ">About Us</a></ActiveLink>
         <ActiveLink><a className="text-[var(--primary-text)] ">Classes</a></ActiveLink>
         <ActiveLink><a className="text-[var(--primary-text)] ">Instructors</a></ActiveLink>
@@ -34,7 +34,8 @@ const Navbar = () => {
         };
     }, []);
 
-    const navbarClasses = `navbar fixed top-0 left-0 w-full bg-base-100 shadow-2xl lg:px-10 md:px-5 sm:px-2 ${ isScrolled ? "z-[50]" : "" }`;
+    const navbarClasses = `navbar max-w-screen-xl mx-auto fixed top-0 bg-base-100 shadow-xl lg:px-10 md:px-5 sm:px-2 ${isScrolled ? "z-[50]" : ""}`;
+
 
     return (
         <div className={navbarClasses}>

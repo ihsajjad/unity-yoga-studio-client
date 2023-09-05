@@ -18,7 +18,7 @@ const ClassHighlights = () => {
         {classes.map((singleClass) => (
           <div
             key={singleClass._id}
-            className="border border-[var(--main-color)] p-5 rounded-lg bg-white flex flex-col shadow-lg shadow-slate-300 hover:shadow-[#8ccf17ac]  hover:scale-105 duration-300 class-card"
+            className="border border-[var(--main-color)] p-5 rounded-lg bg-white flex flex-col shadow-lg shadow-slate-300 hover:shadow-[#8ccf17ac]  hover:scale-105 duration-300 class-card text-[var(--primary-text)]"
           >
             <div className="relative">
               <figure className="overflow-hidden rounded-lg">
