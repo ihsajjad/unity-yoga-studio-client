@@ -1,6 +1,3 @@
-import React from "react";
-import { Link } from "react-router-dom";
-
 const About = () => {
   return (
     <section className="">
@@ -20,7 +17,6 @@ const About = () => {
                     "https://s37280.pcdn.co/wp-content/uploads/2019/09/about-adriene-1024x1024.jpg"
                   }
                   alt="about image"
-                  fill
                 />
               </div>
             </div>
@@ -113,7 +109,6 @@ const About = () => {
                     "https://s37280.pcdn.co/wp-content/uploads/2019/09/find-what-feels-good-1024x1024.jpg"
                   }
                   alt="about image"
-                  fill
                 />
               </div>
             </div>
