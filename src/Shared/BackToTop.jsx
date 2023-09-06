@@ -30,7 +30,7 @@ const BackToTop = () => {
 
     return (
         <>
-            {isVisible && <div className="sticky bottom-20 left-full h-10 w-10 rounded-full bg-[var(--main-color)] flex items-center justify-center z-50 shadow-[0_0_16px_-4px_gray] border-2"
+            {isVisible && <div className="fixed bottom-16 right-2 h-10 w-10 rounded-full bg-[var(--main-color)] flex items-center justify-center"
                 onClick={handleScroll}>
                 <div className=' animate-bounce'>
                     <AiOutlineArrowUp size={32} color='#fff' />
