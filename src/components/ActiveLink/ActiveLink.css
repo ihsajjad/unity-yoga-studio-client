@@ -1,0 +1,6 @@
+/* Custom CSS for the active route */
+.active{
+    color: black;
+    font-weight: 800;
+    text-decoration: underline;
+}
