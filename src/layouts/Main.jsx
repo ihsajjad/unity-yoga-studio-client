@@ -6,8 +6,8 @@ const Main = () => {
   return (
     <div>
       <Outlet />
-      <BackToTop/>
-      <Footer/>
+      <Footer />
+      <BackToTop />
     </div>
   );
 };
