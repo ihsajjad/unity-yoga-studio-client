@@ -9,6 +9,8 @@ const Main = () => {
       {/* Nav Bar */}
       <Navbar />
       <Outlet />
+      <Footer />
+      <BackToTop />
       <BackToTop />
       <Footer />
     </div>
