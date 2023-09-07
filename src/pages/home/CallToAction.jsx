@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 
 const CallToAction = () => {
   return (
-    <section className="section-container">
+    <section className="section-container bg-[var(--primary-bg)]">
       {/* to-[var(--secondary-color)] */}
       <div className=" flex md:gap-10 bg-gradient-to-r from-[var(--main-color)] border-2 border-[var(--main-color)]  md:p-8 rounded-lg shadow-xl shadow-[#8f6ea7ab]">
         <div className="flex-1 mb-5">

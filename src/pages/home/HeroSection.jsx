@@ -1,10 +1,9 @@
-import bg from "../../assets/hero-img.jpg";
 const HeroSection = () => {
   return (
     // <div className="hero min-h-screen bg-fixed bg-cover bg-center  bg-no-repeat" style={{ backgroundImage: 'url(https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxleHBsb3JlLWZlZWR8Mnx8fGVufDB8fHx8fA%3D%3D&w=1000&q=80)' }}>
 
     <div
-      className="hero min-h-screen bg-fixed bg-cover bg-center  bg-no-repeat"
+      className="hero min-h-screen bg-fixed bg-cover bg-center bg-no-repeat"
       style={{
         backgroundImage:
           "url(https://plus.unsplash.com/premium_photo-1664300002404-bf3684f02a03?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80)",
