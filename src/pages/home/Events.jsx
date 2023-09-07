@@ -8,6 +8,7 @@ import { useEffect, useState } from "react";
 // import required modules
 import { Autoplay, Pagination, Navigation } from "swiper/modules";
 import { Link } from "react-router-dom";
+import { FaCalendarCheck } from "react-icons/fa";
 
 const Events = () => {
   const [events, setEvents] = useState([]);
@@ -22,10 +23,8 @@ const Events = () => {
   }, []);
 
   return (
-    <section className="bg-[var(--primary-bg)] md:p-10 px-2 py-5">
-      <h3 className="text-3xl text-center text-[var(--main-color)] font-bold my-5">
-        Upcomming Events
-      </h3>
+    <section className="bg-[var(--primary-bg)] section-container">
+      <h3 className="section-title">Upcomming Events</h3>
 
       <Swiper
         spaceBetween={30}
@@ -42,22 +41,35 @@ const Events = () => {
         className="mySwiper"
       >
         {events.map((event, i) => (
-          <SwiperSlide key={i} className="">
-            <div className="relative h-[90vh] w-full overflow-hidden">
-              <div className="h-full w-full">
+          <SwiperSlide key={i} className="pb-12">
+            <div className="relative h-[90vh] w-full ">
+              <div className="h-full w-full ">
                 <img
                   src={event.image}
                   alt=""
                   className="w-full object-cover h-full"
                 />
               </div>
-              <div className="absolute z-10 top-0 left-auto bg-opacity-40 bg-slate-800 h-full w-full flex items-center">
-                <div className="h-fit w-1/2 mx-auto md:p-10 p-5  rounded-lg bg-opacity-10 text-white space-y-2 bg-gradient-to-b from-purple-800 text-center">
-                  <h3 className="text-3xl text-[var(--main-color)] font-bold text-center">
+              <div className="absolute z-10 top-0 left-auto bg-opacity-0 bg-slate-800 h-full w-full flex items-center">
+                {/* slider content */}
+                <div className="h-fit lg:w-2/4 md:w-3/4 mx-auto md:p-10 p-5 bg-slate-800 bg-opacity-60 text-white text-center flex flex-col space-y-3 relative rounded">
+                  <h3 className="md:text-4xl text-3xl text-center text-[var(--main-color)] font-bold">
                     {event.name}
                   </h3>
-                  <p className=" text-center">{event.description}</p>
-                  <Link to={`/${event.url}`}>View Schedule</Link>
+                  <p className="md:text-xl text-center font-bold">
+                    {event.description}
+                  </p>
+                  <div className="md:absolute top-2 right-3  font-bold text-yellow-300 py-1 px-2 rounded flex items-center gap-1 justify-center">
+                    <span>
+                      <FaCalendarCheck className="text-xl" />
+                    </span>
+                    {event.date}
+                  </div>
+                  <div>
+                    <Link to={`/${event.url}`} className="custom-btn-primary">
+                      View Schedule
+                    </Link>
+                  </div>
                 </div>
               </div>
             </div>
