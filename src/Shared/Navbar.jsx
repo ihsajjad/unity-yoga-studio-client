@@ -6,15 +6,25 @@ const Navbar = () => {
   // Nav Options are here
   const navItems = (
     <>
-      <ActiveLink className="text-[var(--primary-text)] ">Home </ActiveLink>
-      <ActiveLink className="text-[var(--primary-text)] ">About Us</ActiveLink>
-      <ActiveLink className="text-[var(--primary-text)] ">Classes</ActiveLink>
-      <ActiveLink className="text-[var(--primary-text)] ">
+      <ActiveLink className="text-[var(--primary-text)]" to={"/"}>
+        Home{" "}
+      </ActiveLink>
+      <ActiveLink className="text-[var(--primary-text)] " to={"/about-us"}>
+        About Us
+      </ActiveLink>
+      <ActiveLink className="text-[var(--primary-text)] " to={"/classes"}>
+        Classes
+      </ActiveLink>
+      <ActiveLink className="text-[var(--primary-text)] " to={"/instructors"}>
         Instructors
       </ActiveLink>
-      <ActiveLink className="text-[var(--primary-text)] ">Schedule</ActiveLink>
-      <ActiveLink className="text-[var(--primary-text)] ">Blog</ActiveLink>
-      <ActiveLink className="text-[var(--primary-text)] ">
+      <ActiveLink className="text-[var(--primary-text)] " to={"/schedule"}>
+        Schedule
+      </ActiveLink>
+      <ActiveLink className="text-[var(--primary-text)] " to={"/blog"}>
+        Blog
+      </ActiveLink>
+      <ActiveLink className="text-[var(--primary-text)] " to={"/contact"}>
         Contact Us
       </ActiveLink>
     </>
@@ -38,14 +48,14 @@ const Navbar = () => {
     };
   }, []);
 
-  const navbarClasses = `navbar max-w-screen-xl mx-auto fixed top-0 bg-base-100 shadow-xl lg:px-10 md:px-5 sm:px-2 ${
-    isScrolled ? "z-[50]" : ""
-  }`;
+  // const navbarClasses = `navbar max-w-screen-xl mx-auto fixed top-0 bg-base-100 shadow-xl lg:px-10 md:px-5 sm:px-2 ${
+  //   isScrolled ? "z-[50]" : ""
+  // }`;
 
   return (
     <div
       className={
-        "navbar max-w-screen-xl mx-auto sticky top-0 bg-base-100 shadow-xl lg:px-10 md:px-5 sm:px-2 z-20"
+        "navbar max-w-screen-xl mx-auto sticky top-0 bg-base-100 shadow-xl md:px-10 sm:px-2 z-20"
       }
     >
       <div className="navbar-start">
@@ -68,7 +78,7 @@ const Navbar = () => {
           </label>
           <ul
             tabIndex={0}
-            className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow gap-1"
+            className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow gap-1 font-bold"
           >
             {navItems}
           </ul>
@@ -76,7 +86,7 @@ const Navbar = () => {
         <img src={logo} width={"250px"} alt="Unity Yoga Studio" />
       </div>
       <div className="navbar-end hidden lg:flex">
-        <ul className="menu menu-horizontal px-1 gap-3 items-center">
+        <ul className="menu menu-horizontal px-1 gap-3 items-center font-bold">
           {navItems}
         </ul>
       </div>

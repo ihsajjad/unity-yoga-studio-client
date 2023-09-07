@@ -59,7 +59,7 @@ const Events = () => {
                   <p className="md:text-xl text-center font-bold">
                     {event.description}
                   </p>
-                  <div className="md:absolute top-2 right-3  font-bold text-yellow-300 py-1 px-2 rounded flex items-center gap-1 justify-center">
+                  <div className="font-bold text-yellow-300 py-1 px-2 rounded flex items-center gap-1 justify-center">
                     <span>
                       <FaCalendarCheck className="text-xl" />
                     </span>
