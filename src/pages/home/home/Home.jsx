@@ -6,6 +6,7 @@ import Events from "../Events";
 import HeroSection from "../HeroSection";
 import NewsSection from "../NewsSection";
 import Testimonials from "../Testimonials";
+import Blog from "../../Blog/Blog";
 
 const Home = () => {
   return (
@@ -19,6 +20,7 @@ const Home = () => {
       <Events />
       <NewsSection />
       <CallToAction />
+      <Blog/>
       <ContactInfo />
     </div>
   );
