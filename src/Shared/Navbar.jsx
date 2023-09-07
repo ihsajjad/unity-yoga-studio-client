@@ -6,26 +6,16 @@ const Navbar = () => {
   // Nav Options are here
   const navItems = (
     <>
-      <ActiveLink>
-        <a className="text-[var(--primary-text)] ">Home </a>
+      <ActiveLink className="text-[var(--primary-text)] ">Home </ActiveLink>
+      <ActiveLink className="text-[var(--primary-text)] ">About Us</ActiveLink>
+      <ActiveLink className="text-[var(--primary-text)] ">Classes</ActiveLink>
+      <ActiveLink className="text-[var(--primary-text)] ">
+        Instructors
       </ActiveLink>
-      <ActiveLink>
-        <a className="text-[var(--primary-text)] ">About Us</a>
-      </ActiveLink>
-      <ActiveLink>
-        <a className="text-[var(--primary-text)] ">Classes</a>
-      </ActiveLink>
-      <ActiveLink>
-        <a className="text-[var(--primary-text)] ">Instructors</a>
-      </ActiveLink>
-      <ActiveLink>
-        <a className="text-[var(--primary-text)] ">Schedule</a>
-      </ActiveLink>
-      <ActiveLink>
-        <a className="text-[var(--primary-text)] ">Blog</a>
-      </ActiveLink>
-      <ActiveLink>
-        <a className="text-[var(--primary-text)] ">Contact Us</a>
+      <ActiveLink className="text-[var(--primary-text)] ">Schedule</ActiveLink>
+      <ActiveLink className="text-[var(--primary-text)] ">Blog</ActiveLink>
+      <ActiveLink className="text-[var(--primary-text)] ">
+        Contact Us
       </ActiveLink>
     </>
   );
