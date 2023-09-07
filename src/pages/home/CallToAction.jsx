@@ -1,5 +1,3 @@
-import React from "react";
-
 const CallToAction = () => {
   return (
     <section className="py-2 bg-[#272f38] ">
@@ -10,9 +8,8 @@ const CallToAction = () => {
               <div className="wow fadeInUp max-w-[470px]" data-wow-delay=".2s">
                 <div className="mb-5">
                   <h3 className="mb-4 text-xl font-bold text-black dark:text-white sm:text-2xl lg:text-xl xl:text-4xl w-full">
-                  Follow our yoga programs & challenges
+                    Follow our yoga programs & challenges
                   </h3>
-
                 </div>
               </div>
             </div>

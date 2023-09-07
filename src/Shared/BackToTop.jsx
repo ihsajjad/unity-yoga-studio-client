@@ -1,32 +1,32 @@
-import React, { useEffect, useState } from 'react'
-import { AiOutlineArrowUp } from "react-icons/ai"
+import { useEffect, useState } from "react";
+import { AiOutlineArrowUp } from "react-icons/ai";
 
 const BackToTop = () => {
+  const [isVisible, setIsVisible] = useState(false); //To Show/Hide Button
 
-    const [isVisible, setIsVisible] = useState(false); //To Show/Hide Button
+  //To handle the Scroll Button
+  const handleScroll = () => {
+    window.scrollTo({
+      top: 0,
+      left: 0,
+      behavior: "smooth",
+    });
+  };
 
-    //To handle the Scroll Button
-    const handleScroll = () => {
-        window.scrollTo({
-            top: 0,
-            left: 0,
-            behavior: 'smooth'
-        })
+  const listenToScroll = () => {
+    const scrolled =
+      document.documentElement.scrollTop || document.body.scrollTop;
+    if (scrolled > 500) {
+      setIsVisible((prev) => true);
+    } else {
+      setIsVisible((prev) => false);
     }
+  };
 
-    const listenToScroll = () => {
-        const scrolled = document.documentElement.scrollTop || document.body.scrollTop;
-        if (scrolled > 500) {
-            setIsVisible((prev) => true);
-        } else {
-            setIsVisible((prev) => false)
-        }
-    }
-
-    useEffect(() => {
-        window.addEventListener("scroll", listenToScroll);
-        return () => window.removeEventListener("scroll", listenToScroll);
-    }, [])
+  useEffect(() => {
+    window.addEventListener("scroll", listenToScroll);
+    return () => window.removeEventListener("scroll", listenToScroll);
+  }, []);
 
     return (
         <>
@@ -40,4 +40,4 @@ const BackToTop = () => {
     )
 }
 
-export default BackToTop
+export default BackToTop;
