@@ -1,6 +1,5 @@
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-import { Rating } from "@smastrom/react-rating";
 
 const ClassHighlights = () => {
   const [classes, setClasses] = useState([]);
@@ -13,7 +12,9 @@ const ClassHighlights = () => {
 
   return (
     <section className="bg-[var(--primary-bg)] section-container">
-      <h3 className="section-title">Our Popular Classes</h3>
+      <h3 className="md:text-4xl text-3xl text-center font-bold mb-5 md:mb-8 text-[var(--secondary-color)]">
+        Our Popular Classes
+      </h3>
       <div className="grid md:grid-cols-2 lg:grid-cols-3 grid-cols-1 gap-10 p-2">
         {classes.map((singleClass) => (
           <div
@@ -35,14 +36,14 @@ const ClassHighlights = () => {
             <h4 className="text-2xl font-semibold my-2">{singleClass.name}</h4>
             <p className="pb-2 text-justify">{singleClass.description}</p>
             {/* Card footer */}
-            <div className="flex justify-between mt-auto border-t-2 border-[var(--main-color)] pt-2">
+            <div className="flex justify-center mt-auto border-t-2 border-[var(--main-color)] pt-2">
               {/* ratings */}
-              <div className="flex gap-1 items-center justify-center">
+              {/* <div className="flex gap-1 items-center justify-center">
                 <div className="md:w-28 w-24">
                   <Rating value={singleClass.ratings} readOnly />
                 </div>
                 <span className="md:text-xl">{singleClass.ratings}/5</span>
-              </div>
+              </div> */}
 
               <Link to={singleClass.url} className="custom-btn-primary">
                 View Details
