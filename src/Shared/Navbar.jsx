@@ -48,16 +48,13 @@ const Navbar = () => {
     };
   }, []);
 
-  // const navbarClasses = `navbar max-w-screen-xl mx-auto fixed top-0 bg-base-100 shadow-xl lg:px-10 md:px-5 sm:px-2 ${
-  //   isScrolled ? "z-[50]" : ""
-  // }`;
+  const navbarClasses = `navbar max-w-screen-xl mx-auto fixed top-0 bg-base-100 shadow-xl lg:px-10 md:px-5 sm:px-2 ${
+    isScrolled ? "z-[50]" : ""
+  }`;
 
   return (
-    <div
-      className={
-        "navbar max-w-screen-xl mx-auto sticky top-0 bg-base-100 shadow-xl md:px-10 sm:px-2 z-20"
-      }
-    >
+    // "navbar max-w-screen-xl mx-auto sticky top-0 bg-base-100 shadow-xl md:px-10 sm:px-2 z-20"
+    <div className={navbarClasses}>
       <div className="navbar-start">
         <div className="dropdown">
           <label tabIndex={0} className="btn btn-ghost lg:hidden">
