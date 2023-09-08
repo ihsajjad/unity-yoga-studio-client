@@ -29,7 +29,7 @@
 }
 
 .about-para-title {
-  @apply text-lg lg:text-xl font-bold text-black;
+  @apply text-lg  font-bold text-black;
 }
 
 .about-para {
