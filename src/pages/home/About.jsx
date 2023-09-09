@@ -33,7 +33,10 @@ const About = () => {
       </div>
       {/* second section */}
       <div className="flex md:flex-row flex-col-reverse items-start justify-between md:gap-10">
-        <div className="flex-1 space-y-3" data-wow-delay=".2s">
+        <div className="flex-1 space-y-2" data-wow-delay=".2s">
+          <h3 className="mb-4 text-xl md:text-2xl font-bold">
+            Journey of Continuous Learning
+          </h3>
           <div>
             <h3 className="about-para-title">Unity</h3>
             <p className="about-para">
