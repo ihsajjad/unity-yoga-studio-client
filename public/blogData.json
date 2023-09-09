@@ -1,0 +1,38 @@
+[
+    {
+        "_id": 1,
+        "title": "Yoga for Beginners Workshop",
+        "description": "Join us for a beginner-friendly workshop to explore the fundamentals of yoga.",
+        "date": "25/9/2023",
+        "image": "https://th.bing.com/th/id/OIP._YLFCSHwVUprOdW2l_PtzgHaHa?w=188&h=187&c=7&r=0&o=5&dpr=1.3&pid=1.7"
+      },
+    
+      {
+        "_id": 2,
+        "title": "Full Moon Yoga Gathering",
+        "description": "Experience the magic of yoga under the full moon.",
+        "date": "25/10/2023",
+        "image": "https://th.bing.com/th/id/OIP.pX-JrtsA0X04zrY2aTJ4TQHaEK?w=282&h=180&c=7&r=0&o=5&dpr=1.3&pid=1.7"
+      },
+      {
+        "_id": 3,
+        "title": "Vinyasa Flow Intensive",
+        "description": "Dive deep into the flow with our intensive Vinyasa series.",
+        "date": "5/12/2023",
+        "image": "https://th.bing.com/th/id/OIP.g-DprzbXx2NgoXjJsypb3gHaEo?w=250&h=180&c=7&r=0&o=5&dpr=1.3&pid=1.7"
+      },
+      {
+        "_id": 4,
+        "title": "Retreat",
+        "description": "Reconnect with your inner self in a weekend retreat.",
+        "date": "1/1/2024",
+        "image": "https://stayingalivefitness.com/wp-content/uploads/2017/06/yoga-girl-wallpaper-1.jpg"
+      },
+      {
+        "_id": 5,
+        "title": "Meditation Retreat",
+        "description": "Reconnect with your inner self in a weekend retreat.",
+        "date": "1/1/2024",
+        "image": "https://stayingalivefitness.com/wp-content/uploads/2017/06/yoga-girl-wallpaper-1.jpg"
+      }
+]

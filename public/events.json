@@ -1,0 +1,35 @@
+[
+  {
+    "_id": 1,
+    "name": "Yoga for Beginners Workshop",
+    "description": "Join us for a beginner-friendly workshop to explore the fundamentals of yoga.",
+    "date": "25/9/2023",
+    "url": "yoga-for-beginners-workshop",
+    "image": "https://images.pexels.com/photos/7596882/pexels-photo-7596882.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load"
+  },
+
+  {
+    "_id": 2,
+    "name": "Full Moon Yoga Gathering",
+    "description": "Experience the magic of yoga under the full moon.",
+    "date": "25/10/2023",
+    "url": "full-moon-yoga-gathering",
+    "image": "https://images.pexels.com/photos/18087442/pexels-photo-18087442/free-photo-of-group-of-women-during-yoga.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+  },
+  {
+    "_id": 3,
+    "name": "Vinyasa Flow Intensive",
+    "description": "Dive deep into the flow with our intensive Vinyasa series.",
+    "date": "5/12/2023",
+    "url": "vinyasa-flow-intensive",
+    "image": "https://images.pexels.com/photos/5384538/pexels-photo-5384538.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+  },
+  {
+    "_id": 4,
+    "name": "Meditation and Mindfulness Retreat",
+    "description": "Reconnect with your inner self in a weekend retreat.",
+    "date": "1/1/2024",
+    "url": "meditation-and-mindfulness-retreat",
+    "image": "https://images.pexels.com/photos/5184327/pexels-photo-5184327.jpeg?auto=compress&cs=tinysrgb&w=600"
+  }
+]

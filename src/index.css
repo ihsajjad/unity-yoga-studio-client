@@ -4,6 +4,34 @@
 
 :root {
   --main-color: #8bcf17;
+  --secondary-color: #644b76;
   --primary-bg: #f7f7f7;
+  --primary-text: #444444;
+}
 
+.custom-btn-primary {
+  @apply border-2 border-[var(--main-color)] md:py-2 py-1 md:px-3 px-2 rounded-full bg-[var(--main-color)] text-white hover:bg-transparent hover:text-[var(--main-color)] font-semibold duration-300;
+}
+.custom-btn-secondary {
+  @apply border-2 border-[var(--secondary-color)] md:py-2 py-1 md:px-3 px-4 rounded-full bg-[var(--secondary-color)] text-white hover:bg-transparent hover:text-[var(--secondary-color)] font-semibold duration-300 ;
+}
+
+.class-card:hover img {
+  @apply scale-110 overflow-hidden duration-1000;
+}
+
+.section-container {
+  @apply md:px-10 md:py-16 py-8 px-2;
+}
+
+.section-title {
+  @apply md:text-4xl text-3xl text-center text-[var(--main-color)] font-bold mb-5 md:mb-12;
+}
+
+.about-para-title {
+  @apply text-lg lg:text-xl font-bold text-black dark:text-[#a6adba];
+}
+
+.about-para {
+  @apply text-base font-medium text-slate-600 dark:text-[#6a707b];
 }

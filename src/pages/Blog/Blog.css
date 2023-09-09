@@ -1,0 +1,34 @@
+.main-heading-box {
+  /* margin: 10px 0; */
+  font-size: 2.5rem;
+  font-weight: 600;
+  display: flex;
+  justify-content: center;
+}
+
+.blog-box-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 20px;
+}
+
+@media (max-width: 550px) {
+  .blog-box-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+@media (max-width: 350px) {
+  .blog-box-container {
+    padding: 10px;
+  }
+}
+
+@media (max-width: 290px) {
+  .blog-box-container {
+    padding: 0;
+    gap: 0;
+  }
+}
