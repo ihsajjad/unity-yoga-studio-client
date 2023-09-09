@@ -1,6 +1,6 @@
 import { Fragment, useEffect, useState } from "react";
 import "./Blog.css";
-import BlogCard from "../../Components/BlogCard/BlogCard";
+import BlogCard from "../../components/BlogCard/BlogCard";
 import blogData from "../../../public/blogData.json";
 
 const Blog = () => {
