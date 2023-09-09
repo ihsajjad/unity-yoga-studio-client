@@ -37,14 +37,6 @@ const ClassHighlights = () => {
             <p className="pb-2 text-justify">{singleClass.description}</p>
             {/* Card footer */}
             <div className="flex justify-center mt-auto border-t-2 border-[var(--main-color)] pt-2">
-              {/* ratings */}
-              {/* <div className="flex gap-1 items-center justify-center">
-                <div className="md:w-28 w-24">
-                  <Rating value={singleClass.ratings} readOnly />
-                </div>
-                <span className="md:text-xl">{singleClass.ratings}/5</span>
-              </div> */}
-
               <Link to={singleClass.url} className="custom-btn-primary">
                 View Details
               </Link>

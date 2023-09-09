@@ -7,47 +7,12 @@ import { FaFacebookSquare } from "react-icons/fa";
 
 const Footer = () => {
   return (
-    // <footer className="footer grid-rows-2 p-10 mt-12 bg-gray-900 text-[#eee]">
-
-    <footer className="bg-gray-900 text-[#eee] pb-4">
-      <div className="flex justify-between md:px-10 md:pt-16 py-8 px-2">
+    <footer className="  bg-gray-900 text-[#eee] pb-4">
+      <div className="flex justify-start md:justify-center lg:justify-between gap-4 lg:gap-12 items-start flex-col lg:flex-row px-10 md:pt-16 py-8">
         {/* logo and social icon container */}
-        <div className="flex flex-col justify-between">
+        <div className="flex flex-col justify-between self-center">
           <div className="flex items-center justify-center  w-full">
             <img className="w-56" src="/src/assets/logo.png" alt="..." />
-          </div>
-          <div className="flex flex-col items-center gap-2 w-full">
-            <div>
-              <header className="text-center text-xl font-bold pt-2 text-[var(--main-color)] opacity-80">
-                --- Follow Us ---
-              </header>
-              <div className="flex items-center gap-4 justify-center">
-                <a className="transition-transform" href="#">
-                  <FaFacebookSquare
-                    size={38}
-                    className="transition-all hover:text-[var(--main-color)]"
-                  />
-                </a>
-                <a className="transition-transform" href="#">
-                  <AiFillInstagram
-                    size={38}
-                    className="transition-all hover:text-[var(--main-color)]"
-                  />
-                </a>
-                <a className="transition-transform" href="#">
-                  <AiOutlineTwitter
-                    size={38}
-                    className="transition-all hover:text-[var(--main-color)]"
-                  />
-                </a>
-                <a className="transition-transform" href="#">
-                  <AiFillYoutube
-                    size={38}
-                    className="transition-all hover:text-[var(--main-color)]"
-                  />
-                </a>
-              </div>
-            </div>
           </div>
         </div>
 
@@ -92,11 +57,37 @@ const Footer = () => {
           <a className="link link-hover block">Cookie policy</a>
         </nav>
       </div>
-      <div className="text-center text-sm border-t pt-2 border-[var(--main-color)] text-slate-300">
-        <span>
-          All Content &#169; Copyright Unity Yoga Studio 2023. All Rights
+      <div className="text-left border-t pt-2 border-[var(--main-color)] gap-2 text-slate-300 flex flex-col md:flex-row justify-between items-center px-2 md:px-10">
+        <span className="block text-center md:lext-left">
+          All Content&#169; Copyright Unity Yoga Studio 2023. All Rights
           Reserved.
         </span>
+        <div className="flex items-center gap-4 justify-center">
+          <a className="transition-transform" href="#">
+            <FaFacebookSquare
+              size={35}
+              className="transition-all hover:text-[var(--main-color)]"
+            />
+          </a>
+          <a className="transition-transform" href="#">
+            <AiFillInstagram
+              size={35}
+              className="transition-all hover:text-[var(--main-color)]"
+            />
+          </a>
+          <a className="transition-transform" href="#">
+            <AiOutlineTwitter
+              size={35}
+              className="transition-all hover:text-[var(--main-color)]"
+            />
+          </a>
+          <a className="transition-transform" href="#">
+            <AiFillYoutube
+              size={35}
+              className="transition-all hover:text-[var(--main-color)]"
+            />
+          </a>
+        </div>
       </div>
     </footer>
   );

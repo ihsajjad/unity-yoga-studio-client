@@ -6,7 +6,7 @@ import Events from "../Events";
 import HeroSection from "../HeroSection";
 import NewsSection from "../NewsSection";
 import Testimonials from "../Testimonials";
-import Blog from "../../Blog/Blog";
+import Blog from "../blog/Blog";
 
 const Home = () => {
   return (
@@ -20,7 +20,7 @@ const Home = () => {
       <Events />
       <NewsSection />
       <CallToAction />
-      <Blog/>
+      <Blog />
       <ContactInfo />
     </div>
   );
