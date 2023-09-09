@@ -9,7 +9,7 @@ const Footer = () => {
   return (
     // <footer className="footer grid-rows-2 p-10 mt-12 bg-gray-900 text-[#eee]">
 
-    <footer className="  bg-gray-900 text-[#eee] pb-4">
+    <footer className="bg-gray-900 text-[#eee] pb-4">
       <div className="flex justify-between md:px-10 md:pt-16 py-8 px-2">
         {/* logo and social icon container */}
         <div className="flex flex-col justify-between">
@@ -92,7 +92,7 @@ const Footer = () => {
           <a className="link link-hover block">Cookie policy</a>
         </nav>
       </div>
-      <div className="text-center border-t pt-2 border-[var(--main-color)] text-slate-300">
+      <div className="text-center text-sm border-t pt-2 border-[var(--main-color)] text-slate-300">
         <span>
           All Content &#169; Copyright Unity Yoga Studio 2023. All Rights
           Reserved.
