@@ -7,7 +7,6 @@ import { FaFacebookSquare } from "react-icons/fa";
 
 const Footer = () => {
   return (
-
     <footer className="  bg-gray-900 text-[#eee] pb-4">
       <div className="flex justify-start md:justify-center lg:justify-between gap-4 lg:gap-12 items-start flex-col lg:flex-row px-10 md:pt-16 py-8">
         {/* logo and social icon container */}
@@ -60,7 +59,7 @@ const Footer = () => {
       </div>
       <div className="text-left border-t pt-2 border-[var(--main-color)] gap-2 text-slate-300 flex flex-col md:flex-row justify-between items-center px-2 md:px-10">
         <span className="block text-center md:lext-left">
-          All Content &#169; Copyright Unity Yoga Studio 2023. All Rights
+          All Content&#169; Copyright Unity Yoga Studio 2023. All Rights
           Reserved.
         </span>
         <div className="flex items-center gap-4 justify-center">

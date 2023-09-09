@@ -1,7 +1,7 @@
-import { Fragment, useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import "./Blog.css";
-import BlogCard from "../../components/BlogCard/BlogCard";
-import blogData from "../../../public/blogData.json";
+import BlogCard from "../../../components/BlogCard/BlogCard";
+import blogData from "../../../../public/blogData.json";
 
 const Blog = () => {
   const [blogs, setBlogs] = useState([]);
