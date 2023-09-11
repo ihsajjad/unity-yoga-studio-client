@@ -13,7 +13,7 @@ const NewsSection = () => {
           />
         </div>
         <div className="flex flex-col ml-0 md:ml-20 items-center md:items-stretch md:mt-14 gap-y-4">
-          <h2 className="section-title w-[20rem] md:ml-7">Subscribe To Our Newsletter</h2>
+          <h2 className="md:text-4xl text-3xl text-center text-[var(--main-color)] font-bold mb-5 md:mb-0 w-[20rem] md:ml-7 ">Subscribe To Our Newsletter</h2>
           <p className="about-para w-[20rem]  md:ml-0 md:w-[25rem]">
             Stay up-to-date with the latest news & insights from our blog by Unity Yoga Studio
             joining to our newsletter!
