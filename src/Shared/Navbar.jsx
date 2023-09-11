@@ -82,7 +82,7 @@ const Navbar = () => {
         </div>
         <img src={logo} width={"250px"} alt="Unity Yoga Studio" />
       </div>
-      <div className="navbar-end hidden lg:flex">
+      <div className="navbar-end hidden  lg:flex">
         <ul className="menu menu-horizontal px-1 gap-3 items-center font-bold">
           {navItems}
         </ul>
