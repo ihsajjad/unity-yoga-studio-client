@@ -9,6 +9,12 @@
   --primary-text: #444444;
 }
 
+html,
+body,
+:root {
+  overflow-x: hidden;
+}
+
 .custom-btn-primary {
   @apply border-2 border-[var(--main-color)] md:py-2 py-1 md:px-3 px-2 rounded-full bg-[var(--main-color)] text-white hover:bg-transparent hover:text-[var(--main-color)] font-semibold duration-300;
 }
@@ -33,5 +39,5 @@
 }
 
 .about-para {
-  @apply text-base font-medium text-slate-600 dark:text-[#6a707b];
+  @apply text-base font-medium text-[#a6adba] dark:text-[#6a707b];
 }
