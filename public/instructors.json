@@ -1,0 +1,160 @@
+[
+  {
+    "id": 6,
+    "name": "Alexandra Garcia",
+    "specialization": "Ashtanga Yoga",
+    "bio": "Dedicated Ashtanga yoga practitioner and teacher. Guides students in building strength and flexibility.",
+    "email": "alexandra@example.com",
+    "phone": "+1 (678) 901-2345",
+    "website": "https://www.alexandrayoga.com",
+    "image_url": "https://example.com/alexandra-garcia.jpg",
+    "reviews": [
+      {
+        "rating": 5,
+        "comment": "Alexandra's Ashtanga classes are intense and transformative."
+      },
+      {
+        "rating": 4,
+        "comment": "I've improved my practice tremendously under Alexandra's guidance."
+      }
+    ],
+    "video_intro": "https://www.youtube.com/watch?v=uvwxy6789",
+    "teaching_philosophy": "I believe in the power of discipline and self-discovery through Ashtanga yoga. My classes are challenging yet rewarding.",
+    "upcoming_events": [
+      {
+        "event_name": "Ashtanga Workshop",
+        "date": "2023-10-10",
+        "location": "Ashtanga Yoga Center"
+      }
+    ],
+    "social_media": {
+      "facebook": "https://www.facebook.com/alexandrayoga",
+      "instagram": "https://www.instagram.com/alexandrayoga",
+      "twitter": "https://twitter.com/alexandrayoga"
+    }
+  },
+  {
+    "id": 7,
+    "name": "John Miller",
+    "specialization": "Kundalini Yoga",
+    "bio": "Passionate Kundalini yoga practitioner and teacher. Focuses on raising consciousness and spiritual growth.",
+    "email": "john@example.com",
+    "phone": "+1 (789) 012-3456",
+    "website": "https://www.johnyoga.com",
+    "image_url": "https://example.com/john-miller.jpg",
+    "reviews": [
+      {
+        "rating": 5,
+        "comment": "John's Kundalini classes are transformative. I've experienced profound inner shifts."
+      },
+      {
+        "rating": 4,
+        "comment": "I appreciate John's guidance in my Kundalini practice."
+      }
+    ],
+    "video_intro": "https://www.youtube.com/watch?v=xyz12345",
+    "teaching_philosophy": "I believe in the awakening of inner energy and consciousness through Kundalini yoga. My classes promote self-awareness and spiritual growth.",
+    "upcoming_events": [],
+    "social_media": {
+      "facebook": "https://www.facebook.com/johnyoga",
+      "instagram": "https://www.instagram.com/johnyoga",
+      "twitter": "https://twitter.com/johnyoga"
+    }
+  },
+  {
+    "id": 8,
+    "name": "Sophia Patel",
+    "specialization": "Yin Yoga and Meditation",
+    "bio": "Experienced Yin yoga and meditation teacher. Encourages deep relaxation and inner stillness.",
+    "email": "sophia@example.com",
+    "phone": "+1 (890) 123-4567",
+    "website": "https://www.sophiayoga.com",
+    "image_url": "https://example.com/sophia-patel.jpg",
+    "reviews": [
+      {
+        "rating": 5,
+        "comment": "Sophia's Yin yoga classes are a sanctuary of tranquility."
+      },
+      {
+        "rating": 4,
+        "comment": "I've found inner peace through Sophia's meditation sessions."
+      }
+    ],
+    "video_intro": "https://www.youtube.com/watch?v=pqr45678",
+    "teaching_philosophy": "I believe in the healing power of stillness and self-reflection. My classes offer a peaceful journey toward inner harmony.",
+    "upcoming_events": [
+      {
+        "event_name": "Yin Yoga and Meditation Retreat",
+        "date": "2023-10-20",
+        "location": "Tranquil Retreat Center"
+      }
+    ],
+    "social_media": {
+      "facebook": "https://www.facebook.com/sophiayoga",
+      "instagram": "https://www.instagram.com/sophiayoga",
+      "twitter": "https://twitter.com/sophiayoga"
+    }
+  },
+  {
+    "id": 9,
+    "name": "Michael Lee",
+    "specialization": "Iyengar Yoga",
+    "bio": "Dedicated Iyengar yoga practitioner and teacher. Focuses on precision and alignment in poses.",
+    "email": "michael@example.com",
+    "phone": "+1 (901) 234-5678",
+    "website": "https://www.michaelyoga.com",
+    "image_url": "https://example.com/michael-lee.jpg",
+    "reviews": [
+      {
+        "rating": 5,
+        "comment": "Michael's Iyengar classes have greatly improved my posture and alignment."
+      },
+      {
+        "rating": 4,
+        "comment": "I appreciate Michael's attention to detail in teaching yoga poses."
+      }
+    ],
+    "video_intro": "https://www.youtube.com/watch?v=stu123456",
+    "teaching_philosophy": "I believe in the transformative power of precise alignment and awareness in Iyengar yoga. My classes focus on building strength and stability.",
+    "upcoming_events": [],
+    "social_media": {
+      "facebook": "https://www.facebook.com/michaelyoga",
+      "instagram": "https://www.instagram.com/michaelyoga",
+      "twitter": "https://twitter.com/michaelyoga"
+    }
+  },
+  {
+    "id": 10,
+    "name": "Olivia Turner",
+    "specialization": "Bikram Yoga",
+    "bio": "Dedicated Bikram yoga practitioner and teacher. Guides students through a series of 26 challenging postures.",
+    "email": "olivia@example.com",
+    "phone": "+1 (234) 567-8901",
+    "website": "https://www.oliviayoga.com",
+    "image_url": "https://example.com/olivia-turner.jpg",
+    "reviews": [
+      {
+        "rating": 5,
+        "comment": "Olivia's Bikram classes are a fantastic workout. I love the intensity."
+      },
+      {
+        "rating": 4,
+        "comment": "I've built strength and endurance through Olivia's classes."
+      }
+    ],
+    "video_intro": "https://www.youtube.com/watch?v=vwxyz6789",
+    "teaching_philosophy": "I believe in the transformative power of the Bikram series. My classes challenge students to push their limits and embrace the heat.",
+    "upcoming_events": [
+      {
+        "event_name": "Bikram Yoga Challenge",
+        "date": "2023-09-25",
+        "location": "Hot Yoga Studio"
+      }
+    ],
+    "social_media": {
+      "facebook": "https://www.facebook.com/oliviayoga",
+      "instagram": "https://www.instagram.com/oliviayoga",
+      "twitter": "https://twitter.com/oliviayoga"
+    }
+  }
+]

@@ -19,7 +19,7 @@ body,
   @apply border-2 border-[var(--main-color)] md:py-2 py-1 md:px-3 px-2 rounded-full bg-[var(--main-color)] text-white hover:bg-transparent hover:text-[var(--main-color)] font-semibold duration-300;
 }
 .custom-btn-secondary {
-  @apply border-2 border-[var(--secondary-color)] md:py-2 py-1 md:px-3 px-4 rounded-full bg-[var(--secondary-color)] text-white hover:bg-transparent hover:text-[var(--secondary-color)] font-semibold duration-300 ;
+  @apply border-2 border-[var(--secondary-color)] md:py-2 py-1 md:px-3 px-4 rounded-full bg-[var(--secondary-color)] text-white hover:bg-transparent hover:text-[var(--secondary-color)] font-semibold duration-300;
 }
 
 .class-card:hover img {
