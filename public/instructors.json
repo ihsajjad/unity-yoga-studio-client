@@ -7,7 +7,7 @@
     "email": "alexandra@example.com",
     "phone": "+1 (678) 901-2345",
     "website": "https://www.alexandrayoga.com",
-    "image_url": "https://example.com/alexandra-garcia.jpg",
+    "image": "https://images.pexels.com/photos/8436720/pexels-photo-8436720.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
     "reviews": [
       {
         "rating": 5,
@@ -41,7 +41,7 @@
     "email": "john@example.com",
     "phone": "+1 (789) 012-3456",
     "website": "https://www.johnyoga.com",
-    "image_url": "https://example.com/john-miller.jpg",
+    "image": "https://example.com/john-miller.jpg",
     "reviews": [
       {
         "rating": 5,
@@ -69,7 +69,7 @@
     "email": "sophia@example.com",
     "phone": "+1 (890) 123-4567",
     "website": "https://www.sophiayoga.com",
-    "image_url": "https://example.com/sophia-patel.jpg",
+    "image": "https://example.com/sophia-patel.jpg",
     "reviews": [
       {
         "rating": 5,
@@ -103,7 +103,7 @@
     "email": "michael@example.com",
     "phone": "+1 (901) 234-5678",
     "website": "https://www.michaelyoga.com",
-    "image_url": "https://example.com/michael-lee.jpg",
+    "image": "https://example.com/michael-lee.jpg",
     "reviews": [
       {
         "rating": 5,
@@ -131,7 +131,7 @@
     "email": "olivia@example.com",
     "phone": "+1 (234) 567-8901",
     "website": "https://www.oliviayoga.com",
-    "image_url": "https://example.com/olivia-turner.jpg",
+    "image": "https://example.com/olivia-turner.jpg",
     "reviews": [
       {
         "rating": 5,

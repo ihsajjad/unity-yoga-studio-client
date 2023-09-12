@@ -16,7 +16,10 @@
     "max_students": 20,
     "class_size": 15,
     "class_type": "In-person",
-    "instructor": {},
+    "instructor": {
+      "name": "Alexandra Garcia",
+      "email": "alexandra@example.com"
+    },
     "ratings": 4.5,
     "reviews": [
       {

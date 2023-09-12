@@ -41,3 +41,21 @@ body,
 .about-para {
   @apply text-base font-medium text-[#a6adba] dark:text-[#6a707b];
 }
+
+.cutom-shape {
+  clip-path: polygon(0 0, 100% 0, 72% 100%, 0% 100%);
+  background-color: var(--main-color);
+}
+
+.message-bg {
+  clip-path: polygon(
+    0% 0%,
+    100% 0%,
+    100% 69%,
+    72% 69%,
+    81% 100%,
+    56% 69%,
+    0 68%
+  );
+  background-color: var(--secondary-color);
+}
