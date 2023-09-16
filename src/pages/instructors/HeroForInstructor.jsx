@@ -43,23 +43,23 @@ const HeroForInstructor = () => {
             <div className="hero-overlay bg-opacity-60"></div>
             <div className="hero-content text-center text-neutral-content flex flex-col">
                 <div className="max-w-md">
-                    <h1 className="mb-5 text-5xl font-bold ">Fight Stress & Find Serenity</h1>
-                    <p className="mb-5">Meet our wordls best yoga teachers. Who are experienced.</p>
+                    <h1 className="mb-5 lg:text-5xl font-bold text-4xl">Fight Stress & Find Serenity</h1>
+                    <p className="mb-5 ">Meet our wordls best yoga teachers. Who are experienced.</p>
                     <Link className='custom-btn-primary' to='/classes'>Enroll Now</Link>
                 </div>
                 {/* Countdown is here */}
-                <div className="grid grid-flow-col gap-5 text-center auto-cols-max">
+                <div className="grid grid-flow-col lg:gap-5 gap-2 text-center auto-cols-max mt-2">
                     <div className="flex flex-col p-2 bg-neutral rounded-box text-neutral-content">
-                        <span className="countdown font-mono text-5xl">{days}</span> days
+                        <span className="countdown font-mono lg:text-5xl text-4xl">{days}</span> days
                     </div>
                     <div className="flex flex-col p-2 bg-neutral rounded-box text-neutral-content">
-                        <span className="countdown font-mono text-5xl">{hours}</span> hours
+                        <span className="countdown font-mono lg:text-5xl text-4xl">{hours}</span> hours
                     </div>
                     <div className="flex flex-col p-2 bg-neutral rounded-box text-neutral-content">
-                        <span className="countdown font-mono text-5xl">{minutes}</span> min
+                        <span className="countdown font-mono lg:text-5xl text-4xl">{minutes}</span> min
                     </div>
                     <div className="flex flex-col p-2 bg-neutral rounded-box text-neutral-content">
-                        <span className="countdown font-mono text-5xl">{seconds}</span> sec
+                        <span className="countdown font-mono lg:text-5xl text-4xl">{seconds}</span> sec
                     </div>
                 </div>
             </div>
