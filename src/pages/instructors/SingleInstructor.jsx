@@ -3,7 +3,7 @@ import React from 'react';
 const singleInstructor = ({ instructor }) => {
 
     const { id, name, specialization, bio, email, phone, website, image, reviews, social_media, teaching_philosophy } = instructor;
-    console.log(social_media)
+    // console.log(social_media.facebook)
     return (
         <div className="card w-full bg-base-100 shadow-xl gap-10 h-full justify-between ">
             <div>
@@ -24,8 +24,8 @@ const singleInstructor = ({ instructor }) => {
                     <h3 className="font-bold mb-2 text-4xl text-center text-[var(--secondary-color)]">{name}</h3>
                     <p className="py-2  text-justify"><span className='font-semibold'>Teaching Philosofy:</span> {teaching_philosophy}</p>
                     <div className='flex lg:flex-row flex-col justify-between'>
-                    <p className="py-2">Email: {email}</p>
-                    <p className="py-2">Phone: {phone}</p>
+                        <p className="py-2">Email: {email}</p>
+                        <p className="py-2">Phone: {phone}</p>
                     </div>
                     {/* <p className="py-2">Website: {website}</p> */}
 
