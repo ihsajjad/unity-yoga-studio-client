@@ -7,9 +7,9 @@ const Instructors = () => {
 
     console.log(instructors);
     return (
-        <>
+        <div className='section-container bg-[var(--primary-bg)]'>
             <h1 className='section-title mt-4'>Our Instructors</h1>
-            <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-10 p-10 lg:p-20'>
+            <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-10'>
                 {instructors.map((i) => (
                     <SingleInstructor
                         key={i.id}
@@ -17,7 +17,7 @@ const Instructors = () => {
                     />
                 ))}
             </div>
-        </>
+        </div>
     );
 };
 
