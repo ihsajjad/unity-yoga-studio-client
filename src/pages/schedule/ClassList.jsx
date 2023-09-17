@@ -23,7 +23,7 @@ const ClassList = ({ classes, setClassId }) => {
             <div
               onClick={() => setClassId(Class._id)}
               key={Class._id}
-              className={`w-[22rem] flex items-center justify-between gap-4 border-2 rounded-lg border-[var(--secondary-color)] p-2 class ${Class._id === 1 && 'active-class'}`}
+              className={`w-[22rem] flex items-center justify-between gap-4 border-2 rounded-lg border-[var(--secondary-color)] p-2 class ${Class._id === 1 && 'active-class'} cursor-default`}
             >
               <div className='flex flex-col items-start justify-center gap-2'>
                 <span className='text-2xl font-bold text-center flex items-center gap-1'>

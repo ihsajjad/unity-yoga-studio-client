@@ -66,25 +66,25 @@ const Footer = () => {
           <a className="transition-transform" href="#">
             <FaFacebookSquare
               size={35}
-              className="transition-all hover:text-[var(--main-color)] hover:text-[#1776F3]"
+              className="transition-all hover:text-[#1776F3]"
             />
           </a>
           <a className="transition-transform" href="#">
             <AiFillInstagram
               size={35}
-              className="transition-all hover:text-[var(--main-color)] hover:text-[#EB5EC0]"
+              className="transition-all hover:text-[#EB5EC0]"
             />
           </a>
           <a className="transition-transform" href="#">
             <AiOutlineTwitter
               size={35}
-              className="transition-all hover:text-[var(--main-color)] hover:text-[#1CA0F2]"
+              className="transition-all hover:text-[#1CA0F2]"
             />
           </a>
           <a className="transition-transform" href="#">
             <AiFillYoutube
               size={35}
-              className="transition-all hover:text-[var(--main-color)] hover:text-[#F74128]"
+              className="transition-all hover:text-[#F74128]"
             />
           </a>
         </div>

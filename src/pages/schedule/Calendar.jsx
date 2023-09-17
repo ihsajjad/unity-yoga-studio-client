@@ -24,7 +24,7 @@ const Calendar = ({ setDay }) => {
                     return <div
                         key={i}
                         onClick={() => setDay(day)}
-                        className={`h-16 w-16 rounded-xl text-xl font-bold bg-[var(--secondary-color)] text-white border-t-[6px] border-[var(--main-color)] flex items-center justify-center days ${i === 0 && 'active-day'}`}
+                        className={`h-16 w-16 rounded-xl text-xl font-bold bg-[var(--secondary-color)] text-white border-t-[6px] border-[var(--main-color)] flex items-center justify-center days ${i === 0 && 'active-day'} cursor-default`}
                     >
                         {day}
                     </div>

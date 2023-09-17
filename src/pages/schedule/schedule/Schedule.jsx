@@ -27,11 +27,11 @@ const Schedule = () => {
 
 
   return (
-    <section className='pt-24'>
+    <section className='pt-20 pb-12'>
       {/* Upper Heading */}
       <Heading />
-      <section className='section-container flex flex-col lg:flex-row items-center'>
-        <div className='section-container flex flex-col sm:flex-row'>
+      <section className='flex flex-col lg:flex-row items-center justify-center'>
+        <div className='flex flex-col sm:flex-row'>
           {/* Weekly Calendar */}
           <Calendar setDay={setDay} />
           {/* List of Classes */}
