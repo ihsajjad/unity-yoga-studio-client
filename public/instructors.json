@@ -156,5 +156,39 @@
       "instagram": "https://www.instagram.com/oliviayoga",
       "twitter": "https://twitter.com/oliviayoga"
     }
+  },
+  {
+    "id": 11,
+    "name": "Stuart Little",
+    "specialization": "Ashtanga Yoga",
+    "bio": "Dedicated Ashtanga yoga practitioner and teacher. Guides students in building strength and flexibility.",
+    "email": "alexandra@example.com",
+    "phone": "+1 (678) 901-2345",
+    "website": "https://www.stuartyoga.com",
+    "image": "https://i.ibb.co/5nS5ZrJ/instructor5png.png",
+    "reviews": [
+      {
+        "rating": 5,
+        "comment": "Stuart's Ashtanga classes are intense and transformative."
+      },
+      {
+        "rating": 4,
+        "comment": "I've improved my practice tremendously under Alexandra's guidance."
+      }
+    ],
+    "video_intro": "https://www.youtube.com/watch?v=uvwxy6789",
+    "teaching_philosophy": "I believe in the power of discipline and self-discovery through Ashtanga yoga. My classes are challenging yet rewarding.",
+    "upcoming_events": [
+      {
+        "event_name": "Stuart Workshop",
+        "date": "2023-10-10",
+        "location": "Stuart Yoga Center"
+      }
+    ],
+    "social_media": {
+      "facebook": "https://www.facebook.com/stuartlittle",
+      "instagram": "https://www.instagram.com/stuartlittle",
+      "twitter": "https://twitter.com/stuartlittle"
+    }
   }
 ]
