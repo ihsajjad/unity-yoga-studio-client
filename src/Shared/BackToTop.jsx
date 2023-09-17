@@ -17,9 +17,9 @@ const BackToTop = () => {
     const scrolled =
       document.documentElement.scrollTop || document.body.scrollTop;
     if (scrolled > 500) {
-      setIsVisible(true);
+      setIsVisible((prev) => true);
     } else {
-      setIsVisible(false);
+      setIsVisible((prev) => false);
     }
   };
 
@@ -32,7 +32,7 @@ const BackToTop = () => {
     <>
       {isVisible && (
         <div
-          className="fixed bottom-20 right-0 h-10 w-10 rounded-full bg-[var(--secondary-color)] flex items-center justify-center z-50 shadow-[0_0_18px_-5px_black]"
+          className="sticky bottom-20 left-full h-10 w-10 rounded-full bg-[var(--secondary-color)] flex items-center justify-center z-50 shadow-[0_0_18px_-5px_black]"
           onClick={handleScroll}
         >
           <div>
