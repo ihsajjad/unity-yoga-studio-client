@@ -42,14 +42,6 @@ body,
   @apply text-base font-medium text-[#a6adba] dark:text-[#6a707b];
 }
 
-.active-day{
-  @apply bg-slate-800
-}
-
-.active-class{
-  @apply border-[var(--main-color)]
-}
-
 .cutom-shape {
   clip-path: polygon(0 0, 100% 0, 72% 100%, 0% 100%);
   background-color: var(--main-color);
