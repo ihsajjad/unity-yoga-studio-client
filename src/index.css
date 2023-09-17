@@ -41,3 +41,11 @@ body,
 .about-para {
   @apply text-base font-medium text-[#a6adba] dark:text-[#6a707b];
 }
+
+.active-day{
+  @apply bg-slate-800
+}
+
+.active-class{
+  @apply border-[var(--main-color)]
+}
