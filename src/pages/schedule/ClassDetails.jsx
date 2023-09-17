@@ -3,7 +3,7 @@ import { BsFillStopwatchFill } from "react-icons/bs"
 
 const ClassDetails = ({ classDetails }) => {
     return (
-        <section className='w-full h-auto px-2 py-4 shadow-[0_0_17px_0_var(--main-color)] flex flex-col items-center gap-4 rounded-lg'>
+        <section className='h-auto px-8 py-4 shadow-[0_0_17px_0_var(--main-color)] flex flex-col items-center gap-4 rounded-lg'>
             <div className='w-full flex items-center gap-4 justify-center flex-col'>
                 <span className='text-3xl font-bold text-center'>{classDetails.name}</span>
                 <span className='text-3xl flex items-center gap-2'><BsFillStopwatchFill />{classDetails.time}</span>
