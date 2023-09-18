@@ -1,20 +1,18 @@
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 
-const ClassHighlights = () => {
+const Classes = () => {
   const [classes, setClasses] = useState([]);
-
   useEffect(() => {
     fetch("classes.json")
       .then((res) => res.json())
       .then((data) => setClasses(data));
   }, []);
 
+  console.log(classes);
   return (
-    <section className="bg-[var(--primary-bg)] section-container">
-      <h3 className="md:text-4xl text-3xl text-center font-bold mb-5 md:mb-8 text-[var(--secondary-color)]">
-        Our Popular Classes
-      </h3>
+    <section className="section-container bg-[#E5EAE6] mt-10">
+      <h2 className="section-title">Our Classes</h2>
       <div className="grid md:grid-cols-2 lg:grid-cols-3 grid-cols-1 gap-10 p-2">
         {classes.map((singleClass) => (
           <div
@@ -35,7 +33,7 @@ const ClassHighlights = () => {
             {/* Card footer */}
             <div className="flex justify-center mt-auto border-t-2 border-[var(--main-color)] pt-2">
               <Link
-                to={`/class/${singleClass.url}`}
+                to={`/classes/${singleClass.url}`}
                 className="custom-btn-primary"
               >
                 View Details
@@ -48,4 +46,4 @@ const ClassHighlights = () => {
   );
 };
 
-export default ClassHighlights;
+export default Classes;

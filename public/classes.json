@@ -9,8 +9,17 @@
       "endDate": "2023-09-10T11:30:00"
     },
     "fees": 1499,
-    "duration": 400,
-    "instructorInformation": {},
+    "duration": "60 minutes",
+    "schedule": "Mondays and Wednesdays at 6:00 PM",
+    "location": "Serenity Yoga Studio, 123 Main Street, Anytown, USA",
+    "level": "Beginner",
+    "max_students": 20,
+    "class_size": 15,
+    "class_type": "In-person",
+    "instructor": {
+      "name": "Alexandra Garcia",
+      "email": "alexandra@example.com"
+    },
     "ratings": 4.5,
     "reviews": [
       {
@@ -36,8 +45,14 @@
       "endDate": "2023-09-10T11:30:00"
     },
     "fees": 1299,
-    "duration": 300,
-    "instructorInformation": {},
+    "duration": "75 minutes",
+    "schedule": "Tuesdays and Thursdays at 7:30 AM",
+    "location": "Blissful Yoga Center, 456 Elm Avenue, Your City, USA",
+    "level": "Intermediate/Advanced",
+    "max_students": 15,
+    "class_size": 12,
+    "class_type": "In-person",
+    "instructor": {},
     "ratings": 4,
     "reviews": [
       {
@@ -63,8 +78,14 @@
       "endDate": "2023-09-10T11:30:00"
     },
     "fees": 1999,
-    "duration": 500,
-    "instructorInformation": {},
+    "duration": "90 minutes",
+    "schedule": "Fridays at 6:30 PM and Sundays at 10:00 AM",
+    "location": "Tranquil Oasis Yoga, 789 Oak Lane, Your Town, USA",
+    "level": "All Levels",
+    "max_students": 18,
+    "class_size": 14,
+    "class_type": "In-person",
+    "instructor": {},
     "ratings": 5,
     "reviews": [
       {
@@ -90,8 +111,14 @@
       "endDate": "2023-09-10T11:30:00"
     },
     "fees": 1499,
-    "duration": 300,
-    "instructorInformation": {},
+    "duration": "60 minutes",
+    "schedule": "Saturdays at 9:00 AM",
+    "location": "Strength and Balance Yoga Studio, 567 Maple Street, Anytown, USA",
+    "level": "Intermediate/Advanced",
+    "max_students": 25,
+    "class_size": 20,
+    "class_type": "In-person",
+    "instructor": {},
     "ratings": 4.5,
     "reviews": [
       {
@@ -117,8 +144,14 @@
       "endDate": "2023-09-10T11:30:00"
     },
     "fees": 1499,
-    "duration": 400,
-    "instructorInformation": {},
+    "duration": "60 minutes",
+    "schedule": "Wednesdays at 5:00 PM",
+    "location": "Blossom Yoga Studio, 101 Rose Lane, Your City, USA",
+    "level": "Prenatal",
+    "max_students": 12,
+    "class_size": 10,
+    "class_type": "In-person",
+    "instructor": {},
     "ratings": 3.5,
     "reviews": [
       {
@@ -144,8 +177,14 @@
       "endDate": "2023-09-10T11:30:00"
     },
     "fees": 1499,
-    "duration": 400,
-    "instructorInformation": {},
+    "duration": "70 minutes",
+    "schedule": "Tuesdays and Thursdays at 6:30 PM",
+    "location": "Zen Yoga Studio, 789 Willow Avenue, Your City, USA",
+    "level": "Intermediate",
+    "max_students": 18,
+    "class_size": 14,
+    "class_type": "In-person",
+    "instructor": {},
     "ratings": 3.5,
     "reviews": [
       {
