@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import Heading from '../Heading'
+// import Heading from '../Heading'
 import Calendar from '../Calendar'
 import ClassList from '../ClassList'
 import ClassDetails from '../ClassDetails'
@@ -29,7 +29,7 @@ const Schedule = () => {
   return (
     <section className='pt-20 pb-12'>
       {/* Upper Heading */}
-      <Heading />
+      {/* <Heading /> */}
       <section className='flex flex-col lg:flex-row items-center justify-center'>
         <div className='flex flex-col sm:flex-row'>
           {/* Weekly Calendar */}
