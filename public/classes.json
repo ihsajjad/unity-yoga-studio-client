@@ -11,14 +11,15 @@
     "fees": 1499,
     "duration": "60 minutes",
     "schedule": "Mondays and Wednesdays at 6:00 PM",
-    "location": "Serenity Yoga Studio, 123 Main Street, Anytown, USA",
+    "location": "Mumbai, Maharashtra, India",
     "level": "Beginner",
     "max_students": 20,
     "class_size": 15,
     "class_type": "In-person",
     "instructor": {
       "name": "Alexandra Garcia",
-      "email": "alexandra@example.com"
+      "email": "alexandra@example.com",
+      "imgUrl": "https://images.pexels.com/photos/3756912/pexels-photo-3756912.jpeg?auto=compress&cs=tinysrgb&w=1600"
     },
     "ratings": 4.5,
     "reviews": [
@@ -47,12 +48,16 @@
     "fees": 1299,
     "duration": "75 minutes",
     "schedule": "Tuesdays and Thursdays at 7:30 AM",
-    "location": "Blissful Yoga Center, 456 Elm Avenue, Your City, USA",
+    "location": "Delhi, Delhi, India",
     "level": "Intermediate/Advanced",
     "max_students": 15,
     "class_size": 12,
     "class_type": "In-person",
-    "instructor": {},
+    "instructor": {
+      "name": "Alexandra Garcia",
+      "email": "alexandra@example.com",
+      "imgUrl": "https://images.pexels.com/photos/3756912/pexels-photo-3756912.jpeg?auto=compress&cs=tinysrgb&w=1600"
+    },
     "ratings": 4,
     "reviews": [
       {
@@ -80,12 +85,16 @@
     "fees": 1999,
     "duration": "90 minutes",
     "schedule": "Fridays at 6:30 PM and Sundays at 10:00 AM",
-    "location": "Tranquil Oasis Yoga, 789 Oak Lane, Your Town, USA",
+    "location": "Bangalore, Karnataka, India",
     "level": "All Levels",
     "max_students": 18,
     "class_size": 14,
     "class_type": "In-person",
-    "instructor": {},
+    "instructor": {
+      "name": "Alexandra Garcia",
+      "email": "alexandra@example.com",
+      "imgUrl": "https://images.pexels.com/photos/3756912/pexels-photo-3756912.jpeg?auto=compress&cs=tinysrgb&w=1600"
+    },
     "ratings": 5,
     "reviews": [
       {
@@ -113,12 +122,16 @@
     "fees": 1499,
     "duration": "60 minutes",
     "schedule": "Saturdays at 9:00 AM",
-    "location": "Strength and Balance Yoga Studio, 567 Maple Street, Anytown, USA",
+    "location": "Kolkata, West Bengal, India",
     "level": "Intermediate/Advanced",
     "max_students": 25,
     "class_size": 20,
     "class_type": "In-person",
-    "instructor": {},
+    "instructor": {
+      "name": "Alexandra Garcia",
+      "email": "alexandra@example.com",
+      "imgUrl": "https://images.pexels.com/photos/3756912/pexels-photo-3756912.jpeg?auto=compress&cs=tinysrgb&w=1600"
+    },
     "ratings": 4.5,
     "reviews": [
       {
@@ -146,12 +159,16 @@
     "fees": 1499,
     "duration": "60 minutes",
     "schedule": "Wednesdays at 5:00 PM",
-    "location": "Blossom Yoga Studio, 101 Rose Lane, Your City, USA",
+    "location": "Chennai, Tamil Nadu, India",
     "level": "Prenatal",
     "max_students": 12,
     "class_size": 10,
     "class_type": "In-person",
-    "instructor": {},
+    "instructor": {
+      "name": "Alexandra Garcia",
+      "email": "alexandra@example.com",
+      "imgUrl": "https://images.pexels.com/photos/3756912/pexels-photo-3756912.jpeg?auto=compress&cs=tinysrgb&w=1600"
+    },
     "ratings": 3.5,
     "reviews": [
       {
@@ -179,12 +196,16 @@
     "fees": 1499,
     "duration": "70 minutes",
     "schedule": "Tuesdays and Thursdays at 6:30 PM",
-    "location": "Zen Yoga Studio, 789 Willow Avenue, Your City, USA",
+    "location": "Chennai, Tamil Nadu, India",
     "level": "Intermediate",
     "max_students": 18,
     "class_size": 14,
     "class_type": "In-person",
-    "instructor": {},
+    "instructor": {
+      "name": "Alexandra Garcia",
+      "email": "alexandra@example.com",
+      "imgUrl": "https://images.pexels.com/photos/3756912/pexels-photo-3756912.jpeg?auto=compress&cs=tinysrgb&w=1600"
+    },
     "ratings": 3.5,
     "reviews": [
       {

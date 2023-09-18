@@ -21,9 +21,7 @@ const HeroSection = () => {
             A way to reconnect with yourself even amidst the chaos of your daily
             routine. Finding yourself is a journey, not a destination.
           </p>
-          <button className="bg-[var(--main-color)] text-[var(--primary-bg)] font-bold py-1 px-2 rounded">
-            Discover More
-          </button>
+          <button className="custom-btn-primary">Discover More</button>
         </div>
       </div>
     </div>
