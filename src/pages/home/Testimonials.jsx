@@ -18,9 +18,9 @@ const Testimonials = () => {
   return (
     <section className="section-container">
       <h3 className="section-title">Testimonials</h3>
-      <div className="flex gap-5 w-fit">
-        {/* <Marquee className="" autoFill>
-          <div className="flex">
+      <div className="flex gap-5">
+        <Marquee className="" autoFill>
+          <div className="flex overflow-hidden">
             {testimonials.map((testimonail) => (
               <div
                 key={testimonail._id}
@@ -42,7 +42,7 @@ const Testimonials = () => {
               </div>
             ))}
           </div>
-        </Marquee> */}
+        </Marquee>
       </div>
     </section>
   );

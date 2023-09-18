@@ -49,7 +49,7 @@ const Navbar = () => {
   }, []);
 
   const navbarClasses = `navbar max-w-screen-xl mx-auto fixed top-0 bg-base-100 shadow-xl lg:px-10 md:px-5 sm:px-2 ${
-    isScrolled ? "z-[50]" : ""
+    isScrolled ? "z-[50]" : "z-10"
   }`;
 
   return (
@@ -82,7 +82,7 @@ const Navbar = () => {
         </div>
         <img src={logo} width={"250px"} alt="Unity Yoga Studio" />
       </div>
-      <div className="navbar-end hidden  lg:flex">
+      <div className="navbar-end hidden lg:flex">
         <ul className="menu menu-horizontal px-1 gap-3 items-center font-bold">
           {navItems}
         </ul>

@@ -7,7 +7,7 @@
     "email": "alexandra@example.com",
     "phone": "+1 (678) 901-2345",
     "website": "https://www.alexandrayoga.com",
-    "image": "https://images.pexels.com/photos/8436720/pexels-photo-8436720.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+    "image": "https://i.ibb.co/5nS5ZrJ/instructor5png.png",
     "reviews": [
       {
         "rating": 5,
@@ -41,7 +41,7 @@
     "email": "john@example.com",
     "phone": "+1 (789) 012-3456",
     "website": "https://www.johnyoga.com",
-    "image": "https://example.com/john-miller.jpg",
+    "image": "https://i.ibb.co/VLr5y8Q/instructor4png.png",
     "reviews": [
       {
         "rating": 5,
@@ -69,7 +69,7 @@
     "email": "sophia@example.com",
     "phone": "+1 (890) 123-4567",
     "website": "https://www.sophiayoga.com",
-    "image": "https://example.com/sophia-patel.jpg",
+    "image": "https://i.ibb.co/6PyRQWV/instructor3png.png",
     "reviews": [
       {
         "rating": 5,
@@ -103,7 +103,7 @@
     "email": "michael@example.com",
     "phone": "+1 (901) 234-5678",
     "website": "https://www.michaelyoga.com",
-    "image": "https://example.com/michael-lee.jpg",
+    "image": "https://i.ibb.co/c8rg9Sz/instructor2png.png",
     "reviews": [
       {
         "rating": 5,
@@ -131,7 +131,7 @@
     "email": "olivia@example.com",
     "phone": "+1 (234) 567-8901",
     "website": "https://www.oliviayoga.com",
-    "image": "https://example.com/olivia-turner.jpg",
+    "image": "https://i.ibb.co/tZKx5t0/instructor1png.png",
     "reviews": [
       {
         "rating": 5,
@@ -155,6 +155,40 @@
       "facebook": "https://www.facebook.com/oliviayoga",
       "instagram": "https://www.instagram.com/oliviayoga",
       "twitter": "https://twitter.com/oliviayoga"
+    }
+  },
+  {
+    "id": 11,
+    "name": "Stuart Little",
+    "specialization": "Ashtanga Yoga",
+    "bio": "Dedicated Ashtanga yoga practitioner and teacher. Guides students in building strength and flexibility.",
+    "email": "alexandra@example.com",
+    "phone": "+1 (678) 901-2345",
+    "website": "https://www.stuartyoga.com",
+    "image": "https://i.ibb.co/5nS5ZrJ/instructor5png.png",
+    "reviews": [
+      {
+        "rating": 5,
+        "comment": "Stuart's Ashtanga classes are intense and transformative."
+      },
+      {
+        "rating": 4,
+        "comment": "I've improved my practice tremendously under Alexandra's guidance."
+      }
+    ],
+    "video_intro": "https://www.youtube.com/watch?v=uvwxy6789",
+    "teaching_philosophy": "I believe in the power of discipline and self-discovery through Ashtanga yoga. My classes are challenging yet rewarding.",
+    "upcoming_events": [
+      {
+        "event_name": "Stuart Workshop",
+        "date": "2023-10-10",
+        "location": "Stuart Yoga Center"
+      }
+    ],
+    "social_media": {
+      "facebook": "https://www.facebook.com/stuartlittle",
+      "instagram": "https://www.instagram.com/stuartlittle",
+      "twitter": "https://twitter.com/stuartlittle"
     }
   }
 ]

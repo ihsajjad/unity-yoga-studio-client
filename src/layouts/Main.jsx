@@ -5,8 +5,7 @@ import Navbar from "../Shared/Navbar";
 
 const Main = () => {
   return (
-    <div>
-      {/* Nav Bar */}
+    <div className="relative pt-24">
       <Navbar />
       <Outlet />
       <BackToTop />
