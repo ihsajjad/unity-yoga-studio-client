@@ -9,18 +9,14 @@
       "endDate": "2023-09-10T11:30:00"
     },
     "fees": 1499,
-    "duration": "60 minutes",
-    "schedule": "Mondays and Wednesdays at 6:00 PM",
-    "location": "Mumbai, Maharashtra, India",
-    "level": "Beginner",
-    "max_students": 20,
-    "class_size": 15,
-    "class_type": "In-person",
+    "duration": 400,
     "instructor": {
-      "name": "Alexandra Garcia",
-      "email": "alexandra@example.com",
+      "name": "Rashika Khanna",
+      "bio": "With a focus on breath and alignment, Rashika guides students to find strength, balance, and serenity through Hatha practice.",
       "imgUrl": "https://images.pexels.com/photos/3756912/pexels-photo-3756912.jpeg?auto=compress&cs=tinysrgb&w=1600"
     },
+    "time": "08:30 AM",
+    "days": ["MON", "TUE", "WED", "THU", "FRI", "SAT", "SUN"],
     "ratings": 4.5,
     "reviews": [
       {
@@ -46,18 +42,14 @@
       "endDate": "2023-09-10T11:30:00"
     },
     "fees": 1299,
-    "duration": "75 minutes",
-    "schedule": "Tuesdays and Thursdays at 7:30 AM",
-    "location": "Delhi, Delhi, India",
-    "level": "Intermediate/Advanced",
-    "max_students": 15,
-    "class_size": 12,
-    "class_type": "In-person",
+    "duration": 300,
     "instructor": {
-      "name": "Alexandra Garcia",
-      "email": "alexandra@example.com",
+      "name": "Amisha Sharma",
+      "bio": "Amisha combines the art of dynamic movement with a deep understanding of yoga philosophy, creating a harmonious blend of mind and body in every class",
       "imgUrl": "https://images.pexels.com/photos/3756912/pexels-photo-3756912.jpeg?auto=compress&cs=tinysrgb&w=1600"
     },
+    "time": "09:20 AM",
+    "days": ["MON", "TUE", "WED", "THU", "FRI", "SAT", "SUN"],
     "ratings": 4,
     "reviews": [
       {
@@ -83,18 +75,14 @@
       "endDate": "2023-09-10T11:30:00"
     },
     "fees": 1999,
-    "duration": "90 minutes",
-    "schedule": "Fridays at 6:30 PM and Sundays at 10:00 AM",
-    "location": "Bangalore, Karnataka, India",
-    "level": "All Levels",
-    "max_students": 18,
-    "class_size": 14,
-    "class_type": "In-person",
+    "duration": 500,
     "instructor": {
-      "name": "Alexandra Garcia",
-      "email": "alexandra@example.com",
+      "name": "Amisha Sharma",
+      "bio": "Amisha combines the art of dynamic movement with a deep understanding of yoga philosophy, creating a harmonious blend of mind and body in every class",
       "imgUrl": "https://images.pexels.com/photos/3756912/pexels-photo-3756912.jpeg?auto=compress&cs=tinysrgb&w=1600"
     },
+    "time": "09:20 AM",
+    "days": ["MON", "TUE", "WED", "THU", "FRI", "SAT", "SUN"],
     "ratings": 5,
     "reviews": [
       {
@@ -120,18 +108,14 @@
       "endDate": "2023-09-10T11:30:00"
     },
     "fees": 1499,
-    "duration": "60 minutes",
-    "schedule": "Saturdays at 9:00 AM",
-    "location": "Kolkata, West Bengal, India",
-    "level": "Intermediate/Advanced",
-    "max_students": 25,
-    "class_size": 20,
-    "class_type": "In-person",
+    "duration": 300,
     "instructor": {
-      "name": "Alexandra Garcia",
-      "email": "alexandra@example.com",
+      "name": "Amisha Sharma",
+      "bio": "Amisha combines the art of dynamic movement with a deep understanding of yoga philosophy, creating a harmonious blend of mind and body in every class",
       "imgUrl": "https://images.pexels.com/photos/3756912/pexels-photo-3756912.jpeg?auto=compress&cs=tinysrgb&w=1600"
     },
+    "time": "09:20 AM",
+    "days": ["MON", "TUE", "WED", "THU", "FRI", "SAT", "SUN"],
     "ratings": 4.5,
     "reviews": [
       {
@@ -157,18 +141,14 @@
       "endDate": "2023-09-10T11:30:00"
     },
     "fees": 1499,
-    "duration": "60 minutes",
-    "schedule": "Wednesdays at 5:00 PM",
-    "location": "Chennai, Tamil Nadu, India",
-    "level": "Prenatal",
-    "max_students": 12,
-    "class_size": 10,
-    "class_type": "In-person",
+    "duration": 400,
     "instructor": {
-      "name": "Alexandra Garcia",
-      "email": "alexandra@example.com",
-      "imgUrl": "https://images.pexels.com/photos/3756912/pexels-photo-3756912.jpeg?auto=compress&cs=tinysrgb&w=1600"
+      "name": "Amisha Sharma",
+      "bio": "Amisha combines the art of dynamic movement with a deep understanding of yoga philosophy, creating a harmonious blend of mind and body in every class",
+      "imgUrl": "https://images.pexels.com/photos/9271215/pexels-photo-9271215.jpeg?auto=compress&cs=tinysrgb&w=1600"
     },
+    "time": "09:20 AM",
+    "days": ["MON", "TUE", "WED", "THU", "FRI", "SAT", "SUN"],
     "ratings": 3.5,
     "reviews": [
       {
@@ -194,18 +174,14 @@
       "endDate": "2023-09-10T11:30:00"
     },
     "fees": 1499,
-    "duration": "70 minutes",
-    "schedule": "Tuesdays and Thursdays at 6:30 PM",
-    "location": "Chennai, Tamil Nadu, India",
-    "level": "Intermediate",
-    "max_students": 18,
-    "class_size": 14,
-    "class_type": "In-person",
+    "duration": 400,
     "instructor": {
-      "name": "Alexandra Garcia",
-      "email": "alexandra@example.com",
-      "imgUrl": "https://images.pexels.com/photos/3756912/pexels-photo-3756912.jpeg?auto=compress&cs=tinysrgb&w=1600"
+      "name": "Amisha Sharma",
+      "bio": "Amisha combines the art of dynamic movement with a deep understanding of yoga philosophy, creating a harmonious blend of mind and body in every class",
+      "imgUrl": "https://images.pexels.com/photos/8436729/pexels-photo-8436729.jpeg?auto=compress&cs=tinysrgb&w=1600"
     },
+    "time": "09:20 AM",
+    "days": ["MON", "TUE", "WED", "THU", "FRI", "SAT"],
     "ratings": 3.5,
     "reviews": [
       {

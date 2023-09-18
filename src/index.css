@@ -61,3 +61,11 @@ body,
     0 74%
   );
 }
+
+.active-day{
+  @apply bg-slate-800
+}
+
+.active-class{
+  @apply border-[var(--main-color)]
+}
