@@ -24,7 +24,7 @@ const Events = () => {
 
   return (
     <section className="bg-[var(--primary-bg)] section-container">
-      <h3 className="section-title">Upcomming Events</h3>
+      <h3 className="section-title">Upcoming Events</h3>
 
       <Swiper
         spaceBetween={30}

@@ -1,6 +1,8 @@
 import { createBrowserRouter } from "react-router-dom";
 import Main from "../layouts/Main";
 import Home from "../pages/home/home/Home";
+import Classes from "../pages/classes/classes/Classes";
+import SingleClass from "../pages/classes/SingleClass";
 import Schedule from "../pages/schedule/schedule/Schedule";
 
 export const router = createBrowserRouter([
@@ -13,9 +15,14 @@ export const router = createBrowserRouter([
         element: <Home />,
       },
       {
-        path: "/schedule",
-        element: <Schedule />
-      }
+        path: "/classes",
+        element: <Classes />,
+      },
+      {
+        path: "/single-class",
+        element: <SingleClass />,
+      },
+      { path: "/schedule", element: <Schedule /> },
     ],
   },
 ]);
