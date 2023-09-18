@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-const BasicYogaAsans = () => {
+const BasicYogaAsans = (  ) => {
     return (
         <div className='flex lg:flex-row flex-col items-center'>
             <div className='w-1/5'>

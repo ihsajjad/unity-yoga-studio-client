@@ -7,7 +7,7 @@ import BasicYogaAsans from './BasicYogaAsans';
 const Instructors = () => {
     const instructors = useLoaderData();
 
-    console.log(instructors);
+    // console.log(instructors);
     return (
         <div>
             <HeroForInstructor />
