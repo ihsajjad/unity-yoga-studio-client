@@ -56,10 +56,11 @@
   );
 }
 
-.active-day{
-  @apply bg-slate-800
+.active-day {
+  @apply bg-slate-800;
 }
 
-.active-class{
-  @apply border-[var(--main-color)]
+.active-class {
+  /* @apply border-[var(--main-color)] */
+  @apply text-base font-medium text-slate-600;
 }
