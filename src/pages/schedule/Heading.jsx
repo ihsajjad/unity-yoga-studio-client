@@ -1,6 +1,6 @@
 const Heading = () => {
   return (
-    <div className="mt-8 px-2">
+    <div className="px-2">
       <h1 className="text-4xl font-bold">
         Yoga <span className="text-[var(--main-color)]">Schedule</span>
       </h1>
