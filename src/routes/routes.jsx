@@ -5,6 +5,8 @@ import Classes from "../pages/classes/classes/Classes";
 import SingleClass from "../pages/classes/SingleClass";
 import Schedule from "../pages/schedule/schedule/Schedule";
 import Instructors from "../pages/instructors/Instructors";
+import ContactUs from "../pages/contactUs/contactUs/ContactUs";
+import AboutUs from "../pages/aboutUs/AboutUs/AboutUs";
 
 export const router = createBrowserRouter([
   {
@@ -15,6 +17,11 @@ export const router = createBrowserRouter([
         path: "/",
         element: <Home />,
       },
+      {
+        path:"/about",
+        element: <AboutUs/>
+      }
+      ,
       {
         path: "/classes",
         element: <Classes />,
@@ -29,6 +36,10 @@ export const router = createBrowserRouter([
         element: <Instructors />,
         loader: () => fetch("instructors.json"),
       },
+      {
+        path: "/contact",
+        element: <ContactUs />
+      }
     ],
   },
 ]);

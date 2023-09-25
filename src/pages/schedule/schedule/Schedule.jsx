@@ -25,7 +25,7 @@ const Schedule = () => {
   }, [day, classId]);
 
   return (
-    <section className="pt-20 pb-12">
+    <section className="pt-16 pb-12">
       {/* Upper Heading */}
       <Heading />
       <section className="flex flex-col lg:flex-row items-center justify-center">

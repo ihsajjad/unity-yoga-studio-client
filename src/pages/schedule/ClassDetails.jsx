@@ -1,5 +1,6 @@
 import React from 'react'
 import { BsFillStopwatchFill } from "react-icons/bs"
+import { Link } from 'react-router-dom'
 
 const ClassDetails = ({ classDetails }) => {
     return (
@@ -12,6 +13,7 @@ const ClassDetails = ({ classDetails }) => {
             <img className='w-[14rem] rounded-full border-4 border-[var(--main-color)] p-2' src={classDetails.instructor?.imgUrl} alt="..." />
             <span className='text-2xl font-bold'>{classDetails.instructor?.name}</span>
             <p className=' max-w-[20rem] text-[var(--primary-text)]'>{classDetails.instructor?.bio}</p>
+            <Link to="/" className='custom-btn-primary'>Book Class</Link>
         </section>
     )
 }
