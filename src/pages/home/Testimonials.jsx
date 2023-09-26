@@ -24,7 +24,7 @@ const Testimonials = () => {
             {testimonials.map((testimonail) => (
               <div
                 key={testimonail._id}
-                className="md:h-[400px] h-fit space-y-3 flex flex-col items-center border border-[var(--secondary-color)] p-5 mx-5 bg-[var(--primary-bg)] rounded-lg shadow-lg shadow-[#5d5db85c] w-[320px]"
+                className="h-[400px] space-y-3 flex flex-col items-center border border-[var(--secondary-color)] p-5 mx-5 bg-[var(--primary-bg)] rounded-lg shadow-lg shadow-[#5d5db85c] w-[320px]"
               >
                 <img
                   src={testimonail.image}
