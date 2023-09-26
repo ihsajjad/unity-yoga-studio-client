@@ -9,7 +9,7 @@ const Navbar = () => {
       <ActiveLink className="text-[var(--primary-text)]" to={"/"}>
         Home{" "}
       </ActiveLink>
-      <ActiveLink className="text-[var(--primary-text)] " to={"/about-us"}>
+      <ActiveLink className="text-[var(--primary-text)] " to={"/about"}>
         About Us
       </ActiveLink>
       <ActiveLink className="text-[var(--primary-text)] " to={"/classes"}>

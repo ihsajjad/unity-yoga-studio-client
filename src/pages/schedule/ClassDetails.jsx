@@ -1,4 +1,4 @@
-import React from "react";
+
 import { BsFillStopwatchFill } from "react-icons/bs";
 
 const ClassDetails = ({ classDetails }) => {
