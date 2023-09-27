@@ -11,7 +11,8 @@
     "fees": 1499,
     "duration": 400,
     "instructor": {
-      "name": "Rashika Khanna",
+      "name": "Alexandra Garcia",
+      "email": "alexandra@example.com",
       "bio": "With a focus on breath and alignment, Rashika guides students to find strength, balance, and serenity through Hatha practice.",
       "imgUrl": "https://i.ibb.co/5nS5ZrJ/instructor5png.png"
     },
@@ -44,8 +45,9 @@
     "fees": 1299,
     "duration": 300,
     "instructor": {
-      "name": "Amisha Sharma",
-      "bio": "Amisha combines the art of dynamic movement with a deep understanding of yoga philosophy, creating a harmonious blend of mind and body in every class",
+      "name": "John Miller",
+      "email": "john@example.com",
+      "bio": "John Miller combines the art of dynamic movement with a deep understanding of yoga philosophy, creating a harmonious blend of mind and body in every class",
       "imgUrl": "https://images.pexels.com/photos/3756912/pexels-photo-3756912.jpeg?auto=compress&cs=tinysrgb&w=1600"
     },
     "time": "09:20 AM",
@@ -77,8 +79,9 @@
     "fees": 1999,
     "duration": 500,
     "instructor": {
-      "name": "Amisha Sharma",
-      "bio": "Amisha combines the art of dynamic movement with a deep understanding of yoga philosophy, creating a harmonious blend of mind and body in every class",
+      "name": "Sophia Patel",
+      "email": "sophia@example.com",
+      "bio": "Sophia Patel combines the art of dynamic movement with a deep understanding of yoga philosophy, creating a harmonious blend of mind and body in every class",
       "imgUrl": "https://images.pexels.com/photos/3756912/pexels-photo-3756912.jpeg?auto=compress&cs=tinysrgb&w=1600"
     },
     "time": "09:20 AM",
@@ -110,8 +113,9 @@
     "fees": 1499,
     "duration": 300,
     "instructor": {
-      "name": "Amisha Sharma",
-      "bio": "Amisha combines the art of dynamic movement with a deep understanding of yoga philosophy, creating a harmonious blend of mind and body in every class",
+      "name": "Michael Lee",
+      "email": "michael@example.com",
+      "bio": "Michael Lee combines the art of dynamic movement with a deep understanding of yoga philosophy, creating a harmonious blend of mind and body in every class",
       "imgUrl": "https://images.pexels.com/photos/3756912/pexels-photo-3756912.jpeg?auto=compress&cs=tinysrgb&w=1600"
     },
     "time": "09:20 AM",
@@ -143,8 +147,9 @@
     "fees": 1499,
     "duration": 400,
     "instructor": {
-      "name": "Amisha Sharma",
-      "bio": "Amisha combines the art of dynamic movement with a deep understanding of yoga philosophy, creating a harmonious blend of mind and body in every class",
+      "name": "Olivia Turner",
+      "email": "olivia@example.com",
+      "bio": "Olivia Turner combines the art of dynamic movement with a deep understanding of yoga philosophy, creating a harmonious blend of mind and body in every class",
       "imgUrl": "https://images.pexels.com/photos/9271215/pexels-photo-9271215.jpeg?auto=compress&cs=tinysrgb&w=1600"
     },
     "time": "09:20 AM",
@@ -176,8 +181,9 @@
     "fees": 1499,
     "duration": 400,
     "instructor": {
-      "name": "Amisha Sharma",
-      "bio": "Amisha combines the art of dynamic movement with a deep understanding of yoga philosophy, creating a harmonious blend of mind and body in every class",
+      "name": "Stuart Little",
+      "email": "stuart@example.com",
+      "bio": "Stuart Little combines the art of dynamic movement with a deep understanding of yoga philosophy, creating a harmonious blend of mind and body in every class",
       "imgUrl": "https://images.pexels.com/photos/8436729/pexels-photo-8436729.jpeg?auto=compress&cs=tinysrgb&w=1600"
     },
     "time": "09:20 AM",

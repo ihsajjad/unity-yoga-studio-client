@@ -1,6 +1,6 @@
 [
   {
-    "id": 6,
+    "id": 1,
     "name": "Alexandra Garcia",
     "specialization": "Ashtanga Yoga",
     "bio": "Dedicated Ashtanga yoga practitioner and teacher. Guides students in building strength and flexibility.",
@@ -34,7 +34,7 @@
     }
   },
   {
-    "id": 7,
+    "id": 2,
     "name": "John Miller",
     "specialization": "Kundalini Yoga",
     "bio": "Passionate Kundalini yoga practitioner and teacher. Focuses on raising consciousness and spiritual growth.",
@@ -62,7 +62,7 @@
     }
   },
   {
-    "id": 8,
+    "id": 3,
     "name": "Sophia Patel",
     "specialization": "Yin Yoga and Meditation",
     "bio": "Experienced Yin yoga and meditation teacher. Encourages deep relaxation and inner stillness.",
@@ -96,7 +96,7 @@
     }
   },
   {
-    "id": 9,
+    "id": 4,
     "name": "Michael Lee",
     "specialization": "Iyengar Yoga",
     "bio": "Dedicated Iyengar yoga practitioner and teacher. Focuses on precision and alignment in poses.",
@@ -124,7 +124,7 @@
     }
   },
   {
-    "id": 10,
+    "id": 5,
     "name": "Olivia Turner",
     "specialization": "Bikram Yoga",
     "bio": "Dedicated Bikram yoga practitioner and teacher. Guides students through a series of 26 challenging postures.",
@@ -158,11 +158,11 @@
     }
   },
   {
-    "id": 11,
+    "id": 6,
     "name": "Stuart Little",
     "specialization": "Ashtanga Yoga",
     "bio": "Dedicated Ashtanga yoga practitioner and teacher. Guides students in building strength and flexibility.",
-    "email": "alexandra@example.com",
+    "email": "stuart@example.com",
     "phone": "+1 (678) 901-2345",
     "website": "https://www.stuartyoga.com",
     "image": "https://i.ibb.co/5nS5ZrJ/instructor5png.png",
