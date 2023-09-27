@@ -9,6 +9,7 @@
       "endDate": "2023-09-10T11:30:00"
     },
     "fees": 1499,
+    "max_students": 30,
     "duration": 400,
     "instructor": {
       "name": "Alexandra Garcia",
@@ -31,7 +32,8 @@
         "comment": "Great class, but it could be a bit longer."
       }
     ],
-    "url": "hatha-yoga"
+    "url": "hatha-yoga",
+    "level": "Beginner"
   },
   {
     "_id": 2,
@@ -43,6 +45,7 @@
       "endDate": "2023-09-10T11:30:00"
     },
     "fees": 1299,
+    "max_students": 30,
     "duration": 300,
     "instructor": {
       "name": "John Miller",
@@ -65,7 +68,8 @@
         "comment": "Great class, but it could be a bit longer."
       }
     ],
-    "url": "vinyasa-flow"
+    "url": "vinyasa-flow",
+    "level": "Beginner"
   },
   {
     "_id": 3,
@@ -77,6 +81,7 @@
       "endDate": "2023-09-10T11:30:00"
     },
     "fees": 1999,
+    "max_students": 30,
     "duration": 500,
     "instructor": {
       "name": "Sophia Patel",
@@ -99,7 +104,8 @@
         "comment": "Great class, but it could be a bit longer."
       }
     ],
-    "url": "ashtanga-yoga"
+    "url": "ashtanga-yoga",
+    "level": "Beginner"
   },
   {
     "_id": 4,
@@ -111,6 +117,7 @@
       "endDate": "2023-09-10T11:30:00"
     },
     "fees": 1499,
+    "max_students": 30,
     "duration": 300,
     "instructor": {
       "name": "Michael Lee",
@@ -133,7 +140,8 @@
         "comment": "Great class, but it could be a bit longer."
       }
     ],
-    "url": "yin-yoga"
+    "url": "yin-yoga",
+    "level": "Beginner"
   },
   {
     "_id": 5,
@@ -145,6 +153,7 @@
       "endDate": "2023-09-10T11:30:00"
     },
     "fees": 1499,
+    "max_students": 30,
     "duration": 400,
     "instructor": {
       "name": "Olivia Turner",
@@ -167,7 +176,8 @@
         "comment": "Great class, but it could be a bit longer."
       }
     ],
-    "url": "meditation-and-mindfulness"
+    "url": "meditation-and-mindfulness",
+    "level": "Beginner"
   },
   {
     "_id": 6,
@@ -179,6 +189,7 @@
       "endDate": "2023-09-10T11:30:00"
     },
     "fees": 1499,
+    "max_students": 30,
     "duration": 400,
     "instructor": {
       "name": "Stuart Little",
@@ -201,6 +212,7 @@
         "comment": "Great class, but it could be a bit longer."
       }
     ],
-    "url": "meditation-and-mindfulness"
+    "url": "meditation-and-mindfulness",
+    "level": "Beginner"
   }
 ]

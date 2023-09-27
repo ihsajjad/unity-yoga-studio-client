@@ -3,8 +3,8 @@ import Marquee from "react-fast-marquee";
 
 const Reviews = ({ reviews }) => {
   return (
-    <div>
-      <h4 className="text-2xl font-bold">Reviews</h4>
+    <div className="">
+      <h4 className="text-2xl font-bold text-center mb-3">Reviews</h4>
       <Marquee className="" autoFill>
         <div className="flex space-y-3">
           {reviews?.map((review, i) => (

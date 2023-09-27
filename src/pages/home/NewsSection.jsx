@@ -8,12 +8,12 @@ const NewsSection = () => {
         <div className="flex-1">
           <Lottie animationData={newsAnimation} className="w-full h-full" />
         </div>
-        <div className="flex flex-col items-end justify-end flex-1 text-center">
+        <div className="md:flex flex-col items-end justify-end flex-1 text-center">
           <div className="space-y-4 p-3">
             <h2 className="smd:text-4xl text-3xl text-center text-[var(--main-color)] font-bold ">
               Subscribe To Our <br /> Newsletter
             </h2>
-            <p className="about-para w-[20rem]  md:ml-0 md:w-[25rem]">
+            <p className="about-para">
               Stay up-to-date with the latest news & insights from our blog by
               Unity Yoga Studio joining to our newsletter!
             </p>
