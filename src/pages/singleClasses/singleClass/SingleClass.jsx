@@ -7,7 +7,7 @@ import InstructorDetails from "../InstructorDetails";
 const SingleClass = () => {
   const [singleClass, setSingleClass] = useState({});
   const [instructorData, setInstructorData] = useState({});
-
+  console.log(singleClass);
   const { url } = useParams();
 
   const {
@@ -15,12 +15,13 @@ const SingleClass = () => {
     name,
     description,
     // img,
-    // date,
+    days,
     fees,
     duration,
     schedule,
     location,
     level,
+    time,
     max_students,
     // class_size,
     // class_type,
@@ -65,8 +66,8 @@ const SingleClass = () => {
   const instructorRating = total / instructorData?.reviews?.length;
 
   return (
-    <section className="section-container space-y-10">
-      <div className={`md:flex gap-2 min-h-[80vh] relative rounded`}>
+    <section className="">
+      <div className="md:flex gap-2 md:min-h-[80vh] relative rounded overflow-hidden">
         <img
           // src={img}
           src={
@@ -76,7 +77,7 @@ const SingleClass = () => {
           className="w-full h-full object-cover rounded absolute"
         />
         <div className="bg-black h-full w-full rounded absolute bg-opacity-10">
-          <p className="bg-[var(--main-color)] absolute bottom-3 right-3 py-1 px-2 rounded font-bold text-[var(--secondary-color)]">
+          <p className="bg-[var(--main-color)] absolute bottom-3 right-3 py-1 px-2 rounded font-bold text-[var(--secondary-color)] z-10 ">
             level: <span className="font-bold">{level}</span>
           </p>
         </div>
@@ -90,15 +91,30 @@ const SingleClass = () => {
               <p>
                 <span className="font-bold">Duration : </span> {duration}
               </p>
-              <p>
-                <span className="font-bold">Schedule : </span> {schedule}
+              <div className="font-bold flex md:flex-row flex-col gap-2">
+                <span className="inline-block">Class Days :</span>
+                <div className="flex gap-2 flex-wrap w-3/4 pr-5">
+                  {days?.map((day) => (
+                    <span
+                      key={day}
+                      className="bg-[var(--main-color)] p-1 rounded text-[var(--secondary-color)]"
+                    >
+                      {day}
+                    </span>
+                  ))}
+                </div>
+                {schedule}
+              </div>
+              <p className="font-bold">
+                <span>Time : </span>
+                {time}
               </p>
-              <p>
-                <span className="font-bold">Maximum students : </span>
+              <p className="font-bold">
+                <span>Maximum students : </span>
                 {max_students}
               </p>
-              <p>
-                <span className="font-bold">Location : </span> {location}
+              <p className="font-bold">
+                <span>Location : </span> {location}
               </p>
             </div>
           </div>
@@ -128,10 +144,10 @@ const SingleClass = () => {
 
       {/* <hr className="border-1 border-[var(--secondary-color)]" /> */}
       {/*feedback area */}
-      <div className=" border-2  pt-5">
-        <h3 className="text-2xl  font-bold mb-3">Write a review:</h3>
-        <div className="w-1/2 flex gap-2 items-end">
-          <div className=" grow">
+      <div className="w-full bg-slate-200 section-container">
+        <h3 className="text-2xl font-bold mb-3">Write a review:</h3>
+        <div className="flex md:w-1/2 w-full flex-col gap-2">
+          <div className="w-full grow">
             <Rating
               emptySymbol="fa fa-star-o fa-2x"
               fullSymbol="fa fa-star fa-2x"
@@ -144,17 +160,16 @@ const SingleClass = () => {
               cols="30"
               placeholder="Your feedback..."
               rows="4"
-              className="border-2 border-[var(--main-color)] outline-none md:w-full rounded p-2 mt-2"
+              className="w-full border-2 border-[var(--main-color)] outline-none md:w-full rounded p-2 mt-2"
             ></textarea>
           </div>
-          <button className="bg-[var(--main-color)] text-white py-1 px-2 rounded h-fit mb-2">
+          <button className="bg-[var(--main-color)] w-fit text-white py-1 px-2 rounded h-fit mb-2">
             Post
           </button>
         </div>
+        {/* Reviews area */}
+        <Reviews reviews={reviews} />
       </div>
-
-      {/* Reviews area */}
-      <Reviews reviews={reviews} />
     </section>
   );
 };

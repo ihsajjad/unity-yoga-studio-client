@@ -18,10 +18,10 @@ const Home = () => {
       <ClassHighlights />
       <Testimonials />
       <Events />
-      <NewsSection />
       <CallToAction />
       <Blog />
       <ContactInfo />
+      <NewsSection />
     </div>
   );
 };
