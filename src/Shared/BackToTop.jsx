@@ -31,12 +31,14 @@ const BackToTop = () => {
   return (
     <>
       {isVisible && (
-        <div
-          className="sticky bottom-20 left-full h-10 w-10 rounded-full bg-[var(--secondary-color)] flex items-center justify-center z-50 shadow-[0_0_18px_-5px_black]"
-          onClick={handleScroll}
-        >
-          <div>
-            <AiOutlineArrowUp size={32} color="#fff" />
+        <div className="text-right float-right">
+          <div
+            className="fixed md:bottom-8 bottom-5 left-auto h-10 w-10 rounded-full bg-[var(--secondary-color)] flex items-center justify-center z-50 shadow-[0_0_18px_-5px_black] md:-ml-16 -ml-12"
+            onClick={handleScroll}
+          >
+            <div>
+              <AiOutlineArrowUp size={32} color="#fff" />
+            </div>
           </div>
         </div>
       )}
