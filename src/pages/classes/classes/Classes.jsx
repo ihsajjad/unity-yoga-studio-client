@@ -33,7 +33,7 @@ const Classes = () => {
             {/* Card footer */}
             <div className="flex justify-center mt-auto border-t-2 border-[var(--main-color)] pt-2">
               <Link
-                to={`/classes/${singleClass.url}`}
+                to={`/class/${singleClass.url}`}
                 className="custom-btn-primary"
               >
                 View Details

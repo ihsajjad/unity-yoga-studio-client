@@ -1,18 +1,20 @@
 import { Rating } from "@smastrom/react-rating";
 import { useEffect, useState } from "react";
-import img_bg from "../../assets/img-bg.svg";
-import instructor_img from "../../assets/image-removebg-preview.png";
-import { FaQuoteLeft } from "react-icons/fa";
+import { useParams } from "react-router-dom";
+import Reviews from "../Reviews";
+import InstructorDetails from "../InstructorDetails";
 
 const SingleClass = () => {
   const [singleClass, setSingleClass] = useState({});
   const [instructorData, setInstructorData] = useState({});
 
+  const { url } = useParams();
+
   const {
-    _id,
+    // _id,
     name,
     description,
-    img,
+    // img,
     // date,
     fees,
     duration,
@@ -28,23 +30,32 @@ const SingleClass = () => {
   } = singleClass;
 
   useEffect(() => {
-    fetch("classes.json")
-      .then((res) => res.json())
-      .then((data) => setSingleClass(data[0]));
-  }, []);
+    const loadData = async () => {
+      const res = await fetch("/classes.json");
+      const data = await res.json();
+      if (data) {
+        const matched = data.find((item) => item.url === url);
+        setSingleClass(matched);
+      }
+    };
+
+    loadData();
+  }, [url]);
 
   useEffect(() => {
-    fetch("instructors.json")
-      .then((res) => res.json())
-      .then((data) => {
-        if (data && instructor?.email) {
-          const matched = data.find(
-            (item) => item?.email === instructor?.email
-          );
-          setInstructorData(matched);
-        }
-      });
+    const loadData = async () => {
+      const res = await fetch("/instructors.json");
+      const data = await res.json();
+      if (data && instructor?.email) {
+        const matched = data.find((item) => item?.email === instructor?.email);
+        setInstructorData(matched);
+      }
+    };
+
+    instructor?.email && loadData();
   }, [instructor]);
+
+  console.log(singleClass);
 
   const total = instructorData?.reviews?.reduce(
     (initial, item) => initial + item.rating,
@@ -52,10 +63,10 @@ const SingleClass = () => {
   );
 
   const instructorRating = total / instructorData?.reviews?.length;
-  console.log(instructorData);
+
   return (
     <section className="section-container space-y-10">
-      <div className={`flex gap-2 min-h-[80vh] relative rounded`}>
+      <div className={`md:flex gap-2 min-h-[80vh] relative rounded`}>
         <img
           // src={img}
           src={
@@ -69,8 +80,8 @@ const SingleClass = () => {
             level: <span className="font-bold">{level}</span>
           </p>
         </div>
-        <div className="flex-1 rounded-l bg-[#644b76] cutom-shape p-10 bg-opacity-80 text-slate-200 space-y-2 flex flex-col">
-          <h3 className="text-5xl font-bold text-[var(--main-color)] mb-1">
+        <div className="flex-1 rounded-l bg-[#644b76] cutom-shape md:p-10 p-3 bg-opacity-80 text-slate-200 space-y-2 flex flex-col">
+          <h3 className="md:text-5xl text-3xl font-bold text-[var(--main-color)] mb-1">
             {name}
           </h3>
           <div className="grow space-y-1">
@@ -113,58 +124,11 @@ const SingleClass = () => {
         <div className="flex-1"></div>
       </div>
 
-      <div className="h-[75vh]">
-        <h3 className="section-title mb-10">Instructor&apos;s Details</h3>
-        <div className="flex relative items-center h-full ">
-          <div className="flex-1 space-y-2">
-            <p>
-              <span className="font-bold">Name : </span>
-              {instructorData.name}
-            </p>
-            <p>
-              <span className="font-bold">Phone : </span>
-              {instructorData.phone}
-            </p>
-            <p>
-              <span className="font-bold">Email : </span>
-              {instructorData.email}
-            </p>
-            <p>
-              {" "}
-              <span className="font-bold">Bio : </span>
-              {instructorData.bio}
-            </p>
-            <div className="flex gap-2 mt-1">
-              <Rating value={ratings} readOnly style={{ maxWidth: "120px" }} />{" "}
-              <span className=" font-bold">{ratings}/5</span>
-            </div>
-            <p>{instructorData?.reviews?.length} reviews</p>
-          </div>
-          {/* instructor's img */}
-          <div className="relative h-full flex-1">
-            <img
-              src={img_bg}
-              alt=""
-              className="absolute bottom-0 right-0 w-full h-full"
-            />
-            <img
-              src={instructor_img}
-              alt=""
-              className="absolute bottom-0 right-0 w-full h-full"
-            />
-          </div>
-          <div className="absolute top-0 left-1/3 w-1/4 rounded bg-slate-300 p-2 flex gap-2">
-            <FaQuoteLeft className="w-24 text-2xl text-[var(--secondary-color)] text-justify" />
-            <p className=" text-[var(--secondary-color)]  rounded">
-              {instructorData.teaching_philosophy}
-            </p>
-          </div>
-        </div>
-      </div>
+      <InstructorDetails instructorData={instructorData} ratings={ratings} />
 
       {/* <hr className="border-1 border-[var(--secondary-color)]" /> */}
       {/*feedback area */}
-      <div className=" pt-5">
+      <div className=" border-2  pt-5">
         <h3 className="text-2xl  font-bold mb-3">Write a review:</h3>
         <div className="w-1/2 flex gap-2 items-end">
           <div className=" grow">
@@ -190,25 +154,7 @@ const SingleClass = () => {
       </div>
 
       {/* Reviews area */}
-      <div>
-        <h4 className="text-2xl font-bold">Reviews</h4>
-        <div className="space-y-3">
-          {reviews?.map((review, i) => (
-            <div key={i}>
-              <h5 className="font-bold">{review.user}</h5>
-              <p>{review.comment}</p>{" "}
-              <div className="flex gap-2">
-                <Rating
-                  value={review.rating}
-                  readOnly
-                  style={{ maxWidth: "120px" }}
-                />{" "}
-                <span>{review.rating}</span>
-              </div>
-            </div>
-          ))}
-        </div>
-      </div>
+      <Reviews reviews={reviews} />
     </section>
   );
 };
