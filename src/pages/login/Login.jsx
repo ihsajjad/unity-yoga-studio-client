@@ -15,7 +15,7 @@ const Login = () => {
           <h1 className="text-white text-5xl font-bold">Login now!</h1>
           <p className="py-6 text-white font-bold">Welcome, Admin! Securely access the dashboard.</p>
         </div>
-        <div className="card flex-shrink-0 w-full max-w-sm shadow-2xl bg-base-100 border-2 border-[var(--main-color)]">
+        <div className="card flex-shrink-0 w-full max-w-sm shadow-2xl bg-base-100 border border-[var(--main-color)]">
           <form onSubmit={handleSubmit(onSubmit)} className="card-body">
             <div className="form-control">
               <label className="label">
