@@ -10,13 +10,13 @@ const SignUp = () => {
   };
 
     return (
-        <div className="hero min-h-screen bg-base-200">
-            <div className="hero-content flex-col lg:flex-row">
+        <div className="hero min-h-screen bg-base-200" style={{backgroundImage: 'url(https://i.ibb.co/HYfBsVR/jd-mason-x-CPdjit-Y5s-Q-unsplash.jpg)'}}>
+            <div className="hero-content flex-col lg:flex-row-reverse gap-8">
                 <div className="text-center lg:text-left">
-                    <h1 className="text-[var(--secondary-color)] text-5xl font-bold">Signup now!</h1>
-                    <p className="py-6">Welcome, Admin! Securely create your account.</p>
+                    <h1 className="text-white text-5xl font-bold">Signup now!</h1>
+                    <p className="py-6 text-white font-bold">Welcome, Admin! Securely create your account.</p>
                 </div>
-                <div className="card flex-shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
+                <div className="card flex-shrink-0 w-full max-w-sm shadow-2xl bg-base-100 border-2 border-[var(--main-color)]">
                     <form onSubmit={handleSubmit(onSubmit)} className="card-body">
                         <div className="form-control">
                             <label className="label">
