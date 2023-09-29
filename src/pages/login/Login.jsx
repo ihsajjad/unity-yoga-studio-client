@@ -1,15 +1,26 @@
+import { useContext } from "react";
 import { useForm } from "react-hook-form";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
+import { AuthContext } from "../../Providers/AuthProvider";
 
 const Login = () => {
 
   const { register, handleSubmit, formState: { errors } } = useForm();
+  const { signIn } = useContext(AuthContext);
+  const navigate = useNavigate();
+
   const onSubmit = data => {
     console.log(data)
+    signIn(data.email, data.password)
+      .then(result => {
+        const user = result.user;
+        console.log(user);
+      });
+      navigate('/dashboard')
   };
 
   return (
-    <div className="hero min-h-screen bg-base-200" style={{backgroundImage: 'url(https://i.ibb.co/HYfBsVR/jd-mason-x-CPdjit-Y5s-Q-unsplash.jpg)'}}>
+    <div className="hero min-h-screen bg-base-200" style={{ backgroundImage: 'url(https://i.ibb.co/HYfBsVR/jd-mason-x-CPdjit-Y5s-Q-unsplash.jpg)' }}>
       <div className="hero-content flex-col lg:flex-row-reverse gap-8">
         <div className="text-center lg:text-left">
           <h1 className="text-white text-5xl font-bold">Login now!</h1>
