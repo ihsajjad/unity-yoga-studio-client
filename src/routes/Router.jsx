@@ -13,6 +13,7 @@ import AddInstructor from "../pages/dashboard/addInstructor/AddInstructor";
 import AddEvent from "../pages/dashboard/addEvent/AddEvent";
 import Blog from "../pages/blog/blog/Blog";
 import Login from "../pages/login/Login";
+import SignUp from "../pages/SignUp/SignUp";
 
 export const router = createBrowserRouter([
   {
@@ -73,4 +74,8 @@ export const router = createBrowserRouter([
     path: "/admin-login",
     element: <Login />,
   },
+  {
+    path: '/admin-signup',
+    element: <SignUp />
+  }
 ]);
