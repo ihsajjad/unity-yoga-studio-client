@@ -2,7 +2,9 @@ import { useContext } from "react";
 import { useForm } from "react-hook-form";
 import { Link, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../Providers/AuthProvider";
-import { FcGoogle } from 'react-icons/fc'
+import { FcGoogle } from 'react-icons/fc';
+import loginAnimation from '../../assets/loginAnimation.json'
+import Lottie from "lottie-react";
 
 const Login = () => {
 
@@ -21,21 +23,21 @@ const Login = () => {
   };
   const handleGoogleSignIn = () => {
     googleSignIn()
-    .then(result => {
-      const user = result.user;
-      console.log(user);
-    });
+      .then(result => {
+        const user = result.user;
+        console.log(user);
+      });
     navigate('/dashboard')
   }
 
   return (
-    <div className="hero min-h-screen bg-base-200" style={{ backgroundImage: 'url(https://i.ibb.co/HYfBsVR/jd-mason-x-CPdjit-Y5s-Q-unsplash.jpg)' }}>
-      <div className="hero-content flex-col lg:flex-row-reverse gap-8">
-        <div className="text-center lg:text-left">
-          <h1 className="text-white text-5xl font-bold">Login now!</h1>
-          <p className="py-6 text-white font-bold">Welcome, Admin! Securely access the dashboard.</p>
+    <div className="hero min-h-screen mx-auto bg-[var(--primary-bg)]">
+      <div className="hero-content flex-col mx-auto lg:flex-row-reverse gap-8">
+        <div className="flex-1">
+          <Lottie animationData={loginAnimation} className="w-full h-full" />
         </div>
-        <div className="card flex-shrink-0 w-full max-w-sm shadow-2xl bg-base-100 border border-[var(--main-color)]">
+        <div className="card flex-shrink-0 w-full max-w-sm shadow-2xl bg-base-100 border border-[var(--secondary-color)]">
+          <h1 className="text-[var(--secondary-color)] text-center mt-4 text-5xl font-bold">Login now!</h1>
           <form onSubmit={handleSubmit(onSubmit)} className="card-body">
             <div className="form-control">
               <label className="label">
@@ -62,13 +64,13 @@ const Login = () => {
               </label>
             </div>
             <div className="form-control mt-6">
-              <input className="custom-btn-primary uppercase" type="submit" value="Login" />
+              <input className="custom-btn-secondary uppercase" type="submit" value="Login" />
             </div>
             <p className="text-center mt-3">Don't have an account? <Link className="font-semibold" to="/admin-signup">Signup here.</Link></p>
             {/* google signin is here */}
             <div className="w-full text-center mt-3">
               <button onClick={handleGoogleSignIn} className="btn btn-square btn-outline">
-                <FcGoogle></FcGoogle>
+                <FcGoogle className="w-8 h-8"></FcGoogle>
               </button>
             </div>
           </form>
