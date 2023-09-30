@@ -2,11 +2,12 @@ import { useContext } from "react";
 import { useForm } from "react-hook-form";
 import { Link, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../Providers/AuthProvider";
+import { FcGoogle } from 'react-icons/fc'
 
 const Login = () => {
 
   const { register, handleSubmit, formState: { errors } } = useForm();
-  const { signIn } = useContext(AuthContext);
+  const { signIn, googleSignIn } = useContext(AuthContext);
   const navigate = useNavigate();
 
   const onSubmit = data => {
@@ -16,8 +17,16 @@ const Login = () => {
         const user = result.user;
         console.log(user);
       });
-      navigate('/dashboard')
+    navigate('/dashboard');
   };
+  const handleGoogleSignIn = () => {
+    googleSignIn()
+    .then(result => {
+      const user = result.user;
+      console.log(user);
+    });
+    navigate('/dashboard')
+  }
 
   return (
     <div className="hero min-h-screen bg-base-200" style={{ backgroundImage: 'url(https://i.ibb.co/HYfBsVR/jd-mason-x-CPdjit-Y5s-Q-unsplash.jpg)' }}>
@@ -56,6 +65,12 @@ const Login = () => {
               <input className="custom-btn-primary uppercase" type="submit" value="Login" />
             </div>
             <p className="text-center mt-3">Don't have an account? <Link className="font-semibold" to="/admin-signup">Signup here.</Link></p>
+            {/* google signin is here */}
+            <div className="w-full text-center mt-3">
+              <button onClick={handleGoogleSignIn} className="btn btn-square btn-outline">
+                <FcGoogle></FcGoogle>
+              </button>
+            </div>
           </form>
         </div>
       </div>
