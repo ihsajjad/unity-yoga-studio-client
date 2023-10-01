@@ -1,8 +1,7 @@
-import React from 'react'
-import { IoCallSharp } from "react-icons/io5"
-import { AiOutlineMail } from "react-icons/ai"
+import React from "react";
+import { IoCallSharp } from "react-icons/io5";
+import { AiOutlineMail } from "react-icons/ai";
 import { FaLocationDot } from "react-icons/fa6";
-
 
 const ContactInfo = () => {
     return (
