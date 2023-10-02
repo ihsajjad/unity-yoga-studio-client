@@ -6,11 +6,13 @@ import { AuthContext } from '../../Providers/AuthProvider';
 import Lottie from "lottie-react";
 import signUpAnimation from '../../assets/signUpAnimation.json'
 
-
+const image_hosting_token = import.meta.env.VITE_Image_Upload_Token;
 const SignUp = () => {
-
+    console.log(image_hosting_token)
     const { register, handleSubmit, formState: { errors } } = useForm();
     const { createUser } = useContext(AuthContext);
+    // image hosting URL
+    const img_hosting_URL = `https://api.imgbb.com/1/upload?&key=${image_hosting_token}`
 
     const onSubmit = data => {
         console.log(data);
@@ -18,6 +20,17 @@ const SignUp = () => {
             .then(result => {
                 const loggedUser = result.user;
                 console.log(loggedUser)
+            });
+        const formData = new FormData();
+        formData.append('image', data.image[0])
+
+        fetch(img_hosting_URL, {
+            method: 'POST',
+            body: formData
+        })
+            .then(res => res.json())
+            .then(imgResponse => {
+                console.log(imgResponse)
             })
     };
 
@@ -40,7 +53,7 @@ const SignUp = () => {
                             <label className="label">
                                 <span className="label-text">Photo URL</span>
                             </label>
-                            <input type="text" {...register("photoURL")} placeholder="Photo URL" className="input input-bordered" />
+                            <input type="file" {...register("photoURL")} placeholder="Photo URL" className="file-input file-input-bordered file-input-sm w-full max-w-xs" />
                             {errors.photoURL && <span className="mt-2 text-red-500">Photo URL is required.</span>}
                         </div>
                         <div className="form-control">
