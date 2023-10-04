@@ -8,31 +8,43 @@ import signUpAnimation from '../../assets/signUpAnimation.json'
 
 const image_hosting_token = import.meta.env.VITE_Image_Upload_Token;
 const SignUp = () => {
-    console.log(image_hosting_token)
+
     const { register, handleSubmit, formState: { errors } } = useForm();
     const { createUser } = useContext(AuthContext);
     // image hosting URL
-    const img_hosting_URL = `https://api.imgbb.com/1/upload?&key=${image_hosting_token}`
+    const img_hosting_URL = `https://api.imgbb.com/1/upload?&key=${image_hosting_token}`;
 
-    const onSubmit = data => {
-        console.log(data);
-        createUser(data.email, data.password)
-            .then(result => {
-                const loggedUser = result.user;
-                console.log(loggedUser)
+    const onSubmit = async (data) => {
+        try {
+            // Create the user in Firebase
+            const result = await createUser(data.email, data.password);
+            const loggedUser = result.user;
+            console.log(loggedUser);
+
+            // Get the uploaded file
+            const imageFile = data.photoURL[0];
+
+            // Create FormData and append the image file
+            const formData = new FormData();
+            formData.append('image', imageFile);
+
+            // Upload the image to imgBB
+            const imgResponse = await fetch(img_hosting_URL, {
+                method: 'POST',
+                body: formData,
             });
-        const formData = new FormData();
-        formData.append('image', data.image[0])
 
-        fetch(img_hosting_URL, {
-            method: 'POST',
-            body: formData
-        })
-            .then(res => res.json())
-            .then(imgResponse => {
-                console.log(imgResponse)
-            })
+            if (imgResponse.ok) {
+                const imgData = await imgResponse.json();
+                console.log(imgData);
+            } else {
+                console.error('Image upload failed.');
+            }
+        } catch (error) {
+            console.error('Error:', error);
+        }
     };
+
 
     return (
         <div className="hero min-h-screen mx-auto bg-[var(--primary-bg)]">
