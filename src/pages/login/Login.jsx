@@ -7,13 +7,21 @@ import loginAnimation from '../../assets/loginAnimation.json'
 import Lottie from "lottie-react";
 
 const Login = () => {
-
-  const { register, handleSubmit, formState: { errors } } = useForm();
+  const { register, handleSubmit, formState: { errors }, setError } = useForm(); // Get setError from useForm
   const { signIn, googleSignIn } = useContext(AuthContext);
   const navigate = useNavigate();
 
-  const onSubmit = data => {
-    console.log(data)
+  const onSubmit = (data) => {
+    console.log(data);
+
+    if (data.password !== data.confirm) {
+      setError("confirm", {
+        type: "manual",
+        message: "Passwords do not match"
+      });
+      return;
+    }
+
     signIn(data.email, data.password)
       .then(result => {
         const user = result.user;
@@ -21,6 +29,7 @@ const Login = () => {
       });
     navigate('/dashboard');
   };
+  //google sign in is here
   const handleGoogleSignIn = () => {
     googleSignIn()
       .then(result => {
@@ -59,6 +68,21 @@ const Login = () => {
               {errors.password?.type === 'minLength' && <span className="mt-2 text-red-500">Password should be atleast 6 characters.</span>}
               {errors.password?.type === 'maxLength' && <span className="mt-2 text-red-500">Password should not be more than 20 characters.</span>}
               {errors.password?.type === 'pattern' && <span className="mt-2 text-red-500">Password must have one uppercase and one number.</span>}
+            </div>
+            <div className="form-control">
+              <label className="label">
+                <span className="label-text">Retype Password</span>
+              </label>
+              <input
+                type="password"
+                {...register("confirm", { required: true })}
+                name="confirm"
+                placeholder="retype the password"
+                className={`input input-bordered ${errors.confirm ? 'input-error' : ''}`}
+              />
+              {errors.confirm && (
+                <span className="mt-2 text-red-500">{errors.confirm.message}</span>
+              )}
               <label className="label">
                 <a href="#" className="label-text-alt link link-hover">Forgot password?</a>
               </label>
