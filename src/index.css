@@ -8,6 +8,9 @@
   --primary-bg: #f7f7f7;
   --primary-text: #444444;
 }
+body {
+  overflow-x: hidden;
+}
 
 .custom-btn-primary {
   @apply border-2 border-[var(--main-color)] md:py-2 py-1 md:px-3 px-2 rounded-full bg-[var(--main-color)] text-white hover:bg-transparent hover:text-[var(--main-color)] font-semibold duration-300;
@@ -16,8 +19,12 @@
   @apply border-2 border-[var(--secondary-color)] md:py-2 py-1 md:px-3 px-2 rounded-full bg-[var(--secondary-color)] text-white hover:bg-transparent hover:text-[var(--secondary-color)] font-semibold duration-300;
 }
 
-.class-card:hover img {
+.class-card:hover .card-bg {
   @apply scale-110 overflow-hidden duration-1000;
+}
+
+.class-card:hover .rounded-img-container {
+  @apply bottom-0;
 }
 
 .section-container {
@@ -33,5 +40,34 @@
 }
 
 .about-para {
+  @apply text-base font-medium text-slate-600 dark:text-[#6a707b];
+}
+
+.cutom-shape {
+  clip-path: polygon(0 0, 100% 0, 72% 100%, 0% 100%);
+}
+
+.message-bg {
+  clip-path: polygon(
+    0% 0%,
+    100% 0%,
+    100% 74%,
+    55% 75%,
+    59% 100%,
+    40% 75%,
+    0 74%
+  );
+}
+
+.active-day {
+  @apply bg-slate-800;
+}
+
+.active-class {
+  /* @apply border-[var(--main-color)] */
   @apply text-base font-medium text-slate-600;
+}
+
+#instructor-img-container {
+  background-position: center;
 }

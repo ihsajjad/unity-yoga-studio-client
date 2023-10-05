@@ -43,7 +43,7 @@ const HeroForInstructor = () => {
             <div className="hero-overlay bg-opacity-60"></div>
             <div className="hero-content text-center text-neutral-content flex flex-col">
                 <div className="max-w-md">
-                    <h1 className="mb-5 lg:text-5xl text-white font-bold text-4xl">Fight Stress & Find Serenity</h1>
+                    <h1 className="mb-5 lg:text-5xl text-white font-bold text-4xl py-2">Fight Stress & Find Serenity</h1>
                     <p className="mb-5 text-white">Meet our wordls best yoga teachers. Who are experienced.</p>
                     <Link className='custom-btn-primary' to='/classes'>Enroll Now</Link>
                 </div>

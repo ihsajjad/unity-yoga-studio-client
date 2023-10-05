@@ -1,12 +1,13 @@
 import React, { useEffect, useState } from 'react';
 import { useLoaderData } from 'react-router-dom';
-import SingleInstructor from './singleInstructor';
+import SingleInstructor from './SingleInstructor';
 import HeroForInstructor from './HeroForInstructor';
+import BasicYogaAsans from './BasicYogaAsans';
 
 const Instructors = () => {
     const instructors = useLoaderData();
 
-    console.log(instructors);
+    // console.log(instructors);
     return (
         <div>
             <HeroForInstructor />
@@ -21,6 +22,7 @@ const Instructors = () => {
                     ))}
                 </div>
             </div>
+            <BasicYogaAsans />
         </div>
     );
 };
