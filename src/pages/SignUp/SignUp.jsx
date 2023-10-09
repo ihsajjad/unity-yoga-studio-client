@@ -26,9 +26,32 @@ const SignUp = () => {
     }
 
     try {
-      const result = await createUser(data.email, data.password);
-      const loggedUser = result.user;
-      console.log(loggedUser);
+      // const result = await createUser(data.email, data.password);
+      // const loggedUser = result.user;
+      // console.log(loggedUser);
+
+      const user = {
+        username: data.name,
+        email: data.email,
+        // password: data.password,
+      };
+
+      const registrationResponse = await fetch('https://yoga-unity.onrender.com/api/users', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(user),
+      });
+
+      if (registrationResponse.ok) {
+        const registeredUser = await registrationResponse.json();
+        console.log('User registered:', registeredUser);
+        
+      } else {
+        console.error('User registration failed.');
+        
+      }
 
       // Get the uploaded file
       const imageFile = data.photoURL[0];
