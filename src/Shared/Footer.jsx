@@ -10,10 +10,11 @@ const Footer = () => {
     <footer className="  bg-gray-900 text-[#eee] pb-4">
       <div className="flex justify-start md:justify-center lg:justify-between gap-4 lg:gap-12 items-start flex-col lg:flex-row px-10 md:pt-16 py-8">
         {/* logo and social icon container */}
-        <div className="flex flex-col justify-between self-center">
+        <div className="flex flex-col gap-5 justify-between self-center">
           <div className="flex items-center justify-center  w-full">
             <img className="w-56" src="/src/assets/logo.png" alt="..." />
           </div>
+          <button onClick={() => document.getElementById("feedbackModal").showModal()} className="text-center text-white btn btn-outline normal-case">Give Your Feedback Here</button>
         </div>
 
         {/* important links */}
@@ -89,6 +90,26 @@ const Footer = () => {
           </a>
         </div>
       </div>
+      {/* Modal - to give feedback */}
+
+      <dialog id="feedbackModal" className="modal">
+        <div className="modal-box">
+          <h3 className="font-bold mb-6 text-3xl text-center text-[var(--secondary-color)]">What do you think about us?</h3>
+          {/* users comments are here */}
+          <div className="form-control text-black ">
+            <label className="label">
+              <span className="label-text">Feedback</span>
+            </label>
+            <textarea className="textarea textarea-bordered h-24" placeholder="give you feedback here"></textarea>
+          </div>
+          <div className="modal-action pt-4 border-t-2 border-[var(--main-color)]">
+            <form method="dialog">
+              <button className="custom-btn-primary mr-5">Close</button>
+              <button className="custom-btn-primary" type="submit">Submit</button>
+            </form>
+          </div>
+        </div>
+      </dialog>
     </footer>
   );
 };
