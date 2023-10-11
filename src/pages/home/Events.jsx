@@ -15,7 +15,8 @@ const Events = () => {
 
   useEffect(() => {
     const loadEvent = () => {
-      fetch("events.json")
+      // fetch("events.json")
+      fetch("https://yoga.asdfrajkumar112.repl.co/event/show-events")
         .then((res) => res.json())
         .then((data) => setEvents(data));
     };

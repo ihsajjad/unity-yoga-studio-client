@@ -5,23 +5,23 @@ import { MdDelete } from "react-icons/md"
 const AddEvent = () => {
 
   const [events, setEvents] = useState([]);
-  const [eventData,setEventData] = useState({
-    name:null,
-    description:null,
-    date:null
+  const [eventData, setEventData] = useState({
+    name: null,
+    description: null,
+    date: null
   })
 
   /* Handling Inputs Change */
   const handleInputChange = (e) => {
     const name = e.target.name;
     const value = e.target.value;
-    setEventData({...eventData,[name]:value})
+    setEventData({ ...eventData, [name]: value })
   }
 
   /* Fetching Events */
   useEffect(() => {
     const fetchEvents = async () => {
-      const res = await fetch("/events.json");
+      const res = await fetch("https://yoga.asdfrajkumar112.repl.co/event/show-events");
       const fetchedEvents = await res.json();
       setEvents(fetchedEvents);
     }
@@ -31,10 +31,66 @@ const AddEvent = () => {
   /* Handling Submit The Form */
   const handleSubmit = async (e) => {
     e.preventDefault();
-  }
+    console.log(eventData);
+    try {
+      const response = await fetch("https://yoga.asdfrajkumar112.repl.co/event/create-event", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(eventData),
+      });
+
+      if (response.ok) {
+
+        const createdEvent = await response.json();
+        console.log("Event created:", createdEvent);
+
+        setEvents([...events, createdEvent]);
+
+        setEventData({
+          name: null,
+          description: null,
+          date: null,
+        });
+      } else {
+
+        console.error("Failed to create event");
+      }
+    } catch (error) {
+      console.error("Error:", error);
+    }
+  };
+
 
   /* Handling Delete a Class */
-  const handleDeleteClass = async () => { }
+  const handleDeleteEvent = async (eventId) => {
+    try {
+      const response = await fetch(`https://yoga.asdfrajkumar112.repl.co/event/delete-event/${eventId}`, {
+        method: "DELETE",
+      });
+
+      if (response.ok) {
+        console.log("Event deleted:", eventId);
+        // Remove the deleted event from the local state
+        setEvents(events.filter(event => event._id !== eventId));
+      } else {
+        console.error("Failed to delete event");
+      }
+    } catch (error) {
+      console.error("Error:", error);
+    }
+  }
+
+  <div className="mt-2 flex items-center gap-2 self-start">
+    <button className="bg-[var(--secondary-color)] rounded-md text-white border-2 transition-all duration-300 hover:border-[var(--secondary-color)] hover:text-[var(--secondary-color)] hover:bg-white px-2 py-1 mt-2">View Schedule</button>
+    <MdDelete
+      onClick={() => handleDeleteEvent(event._id)}
+      size={32}
+      className="cursor-pointer text-red-700 hover:text-[var(--secondary-color)]"
+    />
+  </div>
+
 
   return <section className="flex gap-8 md:gap-4 flex-col md:flex-row">
     <div className="flex flex-col gap-4 w-full md:w-1/2">
@@ -94,7 +150,7 @@ const AddEvent = () => {
               <div className="mt-2 flex items-center gap-2 self-start">
                 <button className="bg-[var(--secondary-color)] rounded-md text-white border-2 transition-all duration-300 hover:border-[var(--secondary-color)] hover:text-[var(--secondary-color)] hover:bg-white px-2 py-1 mt-2">View Shedule</button>
                 <MdDelete
-                  onClick={() => handleDeleteClass(Class._id)}
+                  onClick={() => handleDeleteClass(event._id)}
                   size={32}
                   className="cursor-pointer text-red-700 hover:text-[var(--secondary-color)]" />
               </div>
