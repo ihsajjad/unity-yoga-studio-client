@@ -6,10 +6,10 @@ const AddEvent = () => {
 
   const [events, setEvents] = useState([]);
   const [eventData, setEventData] = useState({
-    name:'',
-    description:'',
-    date:'',
-    url:''
+    name: '',
+    description: '',
+    date: '',
+    url: ''
   })
 
   /* Handling Inputs Change */
@@ -24,12 +24,11 @@ const AddEvent = () => {
     const fetchEvents = async () => {
       const res = await fetch("https://yoga.asdfrajkumar112.repl.co/event/show-events");
       const fetchedEvents = await res.json();
-      // setEvents(fetchedEvents);
-      // console.log(fetchedEvents);
+      setEvents(fetchedEvents);
     }
     fetchEvents();
   }, [])
-  
+
 
   /* Handling Submit The Form */
   const handleSubmit = async (e) => {
@@ -55,7 +54,7 @@ const AddEvent = () => {
           name: '',
           description: '',
           date: '',
-          url:''
+          url: ''
         });
       } else {
 
@@ -77,7 +76,7 @@ const AddEvent = () => {
       if (response.ok) {
         console.log("Event deleted:", eventId);
         // Remove the deleted event from the local state
-        setEvents(events.filter(event => event._id !== eventId));
+        setEvents(events.filter(event => event.id !== eventId));
       } else {
         console.error("Failed to delete event");
       }
@@ -89,7 +88,7 @@ const AddEvent = () => {
   <div className="mt-2 flex items-center gap-2 self-start">
     <button className="bg-[var(--secondary-color)] rounded-md text-white border-2 transition-all duration-300 hover:border-[var(--secondary-color)] hover:text-[var(--secondary-color)] hover:bg-white px-2 py-1 mt-2">View Schedule</button>
     <MdDelete
-      onClick={() => handleDeleteEvent(event._id)}
+      onClick={() => handleDeleteEvent(event.id)}
       size={32}
       className="cursor-pointer text-red-700 hover:text-[var(--secondary-color)]"
     />
@@ -146,14 +145,14 @@ const AddEvent = () => {
       {
         events?.map((event) => {
           return (
-            <div key={event._id} className="flex flex-col items-center w-[20rem] border-2 border-[var(--secondary-color)] p-2 rounded-lg">
+            <div key={event.id} className="flex flex-col items-center w-[20rem] border-2 border-[var(--secondary-color)] p-2 rounded-lg">
               <h3 className=" text-2xl font-bold text-[var(--secondary-color)]">{event.name}</h3>
               <span className="font-bold text-xl flex items-center gap-1"><BsCalendar2DateFill />{event.date}</span>
               <p>{event.description}</p>
               <div className="mt-2 flex items-center gap-2 self-start">
                 <button className="bg-[var(--secondary-color)] rounded-md text-white border-2 transition-all duration-300 hover:border-[var(--secondary-color)] hover:text-[var(--secondary-color)] hover:bg-white px-2 py-1 mt-2">View Shedule</button>
                 <MdDelete
-                  onClick={() => handleDeleteClass(event._id)}
+                  onClick={() => handleDeleteEvent(event.id)}
                   size={32}
                   className="cursor-pointer text-red-700 hover:text-[var(--secondary-color)]" />
               </div>
