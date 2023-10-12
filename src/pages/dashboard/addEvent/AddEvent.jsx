@@ -6,9 +6,10 @@ const AddEvent = () => {
 
   const [events, setEvents] = useState([]);
   const [eventData, setEventData] = useState({
-    name: null,
-    description: null,
-    date: null
+    name:'',
+    description:'',
+    date:'',
+    url:''
   })
 
   /* Handling Inputs Change */
@@ -23,10 +24,12 @@ const AddEvent = () => {
     const fetchEvents = async () => {
       const res = await fetch("https://yoga.asdfrajkumar112.repl.co/event/show-events");
       const fetchedEvents = await res.json();
-      setEvents(fetchedEvents);
+      // setEvents(fetchedEvents);
+      // console.log(fetchedEvents);
     }
     fetchEvents();
   }, [])
+  
 
   /* Handling Submit The Form */
   const handleSubmit = async (e) => {
@@ -49,9 +52,10 @@ const AddEvent = () => {
         setEvents([...events, createdEvent]);
 
         setEventData({
-          name: null,
-          description: null,
-          date: null,
+          name: '',
+          description: '',
+          date: '',
+          url:''
         });
       } else {
 
@@ -121,18 +125,17 @@ const AddEvent = () => {
           <span className="font-bold text-xl flex items-center gap-1">Date (dd/mm/yyyy)</span>
           <input
             className="outline-none border-b-2 border-[var(--secondary-color)]"
-            type="text"
+            type="date"
             placeholder="Enter Date"
             name="date"
             onChange={handleInputChange}
           />
         </div>
         <div className="flex flex-col gap-1">
-          <span className="font-bold text-xl flex items-center gap-1">Date</span>
+          <span className="font-bold text-xl flex items-center gap-1">Image</span>
           <input
             className="w-[20rem] file-input file-input-bordered file-input-primary"
             type="file"
-            placeholder="Enter Date"
             name="name"
           />
         </div>
@@ -141,7 +144,7 @@ const AddEvent = () => {
     </div>
     <div className="w-full md:w-1/2 flex flex-col items-center gap-2 text-center">
       {
-        events.map((event) => {
+        events?.map((event) => {
           return (
             <div key={event._id} className="flex flex-col items-center w-[20rem] border-2 border-[var(--secondary-color)] p-2 rounded-lg">
               <h3 className=" text-2xl font-bold text-[var(--secondary-color)]">{event.name}</h3>
