@@ -2,6 +2,8 @@ import { useEffect, useState } from "react";
 import { BsCalendar2DateFill } from "react-icons/bs"
 import { MdDelete } from "react-icons/md"
 
+const image_hosting_token = import.meta.env.VITE_Image_Upload_Token;
+
 const AddEvent = () => {
 
   const [events, setEvents] = useState([]);
@@ -11,6 +13,31 @@ const AddEvent = () => {
     date: '',
     url: ''
   })
+console.log(eventData);
+  const img_hosting_URL = `https://api.imgbb.com/1/upload?key=${image_hosting_token}`;
+
+  const handleImage = async(e) => {
+    const image =  e.target.files;
+
+    if (image) {
+      // Create FormData and append the image file
+      const formData = new FormData();
+      formData.append('image', image[0]);
+      // Upload the image to imgBB
+      const imgResponse = await fetch(img_hosting_URL, {
+        method: 'POST',
+        body: formData,
+      });
+
+      if (imgResponse.ok) {
+        const imgData = await imgResponse.json();
+        console.log(imgData.data.display_url);
+        setEventData(p=>({...p, url: imgData.data.display_url}))
+      } else {
+        console.error('Image upload failed.');
+      }
+    }
+  }
 
   /* Handling Inputs Change */
   const handleInputChange = (e) => {
@@ -135,7 +162,8 @@ const AddEvent = () => {
           <input
             className="w-[20rem] file-input file-input-bordered file-input-primary"
             type="file"
-            name="name"
+            name="image"
+            onChange={handleImage}
           />
         </div>
         <button type="submit" className="custom-btn-secondary w-[10rem] self-center">Add</button>
