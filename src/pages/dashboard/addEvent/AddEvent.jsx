@@ -11,7 +11,7 @@ const AddEvent = () => {
     name: '',
     description: '',
     date: '',
-    url: ''
+    image: ''
   })
 console.log(eventData);
   const img_hosting_URL = `https://api.imgbb.com/1/upload?key=${image_hosting_token}`;
@@ -32,7 +32,7 @@ console.log(eventData);
       if (imgResponse.ok) {
         const imgData = await imgResponse.json();
         console.log(imgData.data.display_url);
-        setEventData(p=>({...p, url: imgData.data.display_url}))
+        setEventData(p=>({...p, image: imgData.data.display_url}))
       } else {
         console.error('Image upload failed.');
       }

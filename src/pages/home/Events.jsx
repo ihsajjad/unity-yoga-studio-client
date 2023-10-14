@@ -12,7 +12,7 @@ import { FaCalendarCheck } from "react-icons/fa";
 
 const Events = () => {
   const [events, setEvents] = useState([]);
-
+  console.log(events);
   useEffect(() => {
     const loadEvent = () => {
       fetch("https://yoga.asdfrajkumar112.repl.co/event/show-events")
