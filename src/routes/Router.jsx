@@ -14,6 +14,9 @@ import AddEvent from "../pages/dashboard/addEvent/AddEvent";
 import Blog from "../pages/blog/blog/Blog";
 import Login from "../pages/login/Login";
 import SignUp from "../pages/SignUp/SignUp";
+import AddBlog from "../pages/dashboard/addBlog/AddBlog";
+import SingleBlog from "../pages/blog/SingleBlog";
+import { Preview } from "@mui/icons-material";
 
 export const router = createBrowserRouter([
   {
@@ -50,6 +53,14 @@ export const router = createBrowserRouter([
         path: "/blog",
         element: <Blog />,
       },
+      {
+        path: "/blog-preview",
+        element: <Preview />,
+      },
+      {
+        path: "/single-blog",
+        element: <SingleBlog />,
+      },
     ],
   },
   {
@@ -68,6 +79,10 @@ export const router = createBrowserRouter([
         path: "/dashboard/add-event",
         element: <AddEvent />,
       },
+      {
+        path: "/dashboard/add-blog",
+        element: <AddBlog />,
+      },
     ],
   },
   {
@@ -75,7 +90,7 @@ export const router = createBrowserRouter([
     element: <Login />,
   },
   {
-    path: '/admin-signup',
-    element: <SignUp />
-  }
+    path: "/admin-signup",
+    element: <SignUp />,
+  },
 ]);
