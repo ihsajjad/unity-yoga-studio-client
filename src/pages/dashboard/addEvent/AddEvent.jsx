@@ -56,7 +56,6 @@ console.log(eventData);
     fetchEvents();
   }, [])
 
-
   /* Handling Submit The Form */
   const handleSubmit = async (e) => {
     e.preventDefault();
