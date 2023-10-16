@@ -1,10 +1,13 @@
 import React from 'react';
 import Lottie from 'lottie-react';
 import errorAnimation from '../../../public/error.json';
-import { Link } from 'react-router-dom';
+import { Link, useRouteError } from 'react-router-dom';
 
 
 const ErrorPage = () => {
+
+    const error = useRouteError();
+    console.log(error);
 
     return (
         <>
@@ -13,7 +16,8 @@ const ErrorPage = () => {
             </div>
             <div className='text-center mt-5'>
                 <h2 className="text-4xl font-bold text-red-600 mb-4">Oops! Something went wrong.</h2>
-                <p className="text-gray-600">We are sorry, but an error occurred while processing your request.</p>
+                <p className="text-gray-600">{error?.error.message}</p>
+                {/* <p className="text-gray-600">We are sorry, but an error occurred while processing your request.</p> */}
                 <p className="text-gray-600">Please try again later.</p>
                 <Link className='btn btn-danger mt-2' to='/'>Go to Home</Link>
             </div>

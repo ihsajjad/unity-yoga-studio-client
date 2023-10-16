@@ -20,6 +20,7 @@ export const router = createBrowserRouter([
   {
     path: "/",
     element: <Main />,
+    errorElement: <ErrorPage />,
     children: [
       {
         path: "/",
@@ -78,9 +79,5 @@ export const router = createBrowserRouter([
   {
     path: '/admin-signup',
     element: <SignUp />
-  },
-  {
-    path:'*',
-    element: <ErrorPage />
   }
 ]);
