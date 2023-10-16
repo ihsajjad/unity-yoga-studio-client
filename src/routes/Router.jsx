@@ -14,6 +14,7 @@ import AddEvent from "../pages/dashboard/addEvent/AddEvent";
 import Blog from "../pages/blog/blog/Blog";
 import Login from "../pages/login/Login";
 import SignUp from "../pages/SignUp/SignUp";
+import ErrorPage from "../pages/ErrorPage/ErrorPage";
 
 export const router = createBrowserRouter([
   {
@@ -77,5 +78,9 @@ export const router = createBrowserRouter([
   {
     path: '/admin-signup',
     element: <SignUp />
+  },
+  {
+    path:'*',
+    element: <ErrorPage />
   }
 ]);
