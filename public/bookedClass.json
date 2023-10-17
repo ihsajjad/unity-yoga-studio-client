@@ -1,0 +1,34 @@
+[
+  {
+    "_id": 1,
+    "name": "John Doe",
+    "class_name": "Hatha Yoga",
+    "email": "john.doe@example.com",
+    "phone": "+1 (555) 123-4567",
+    "time": "10/10, 10:00 AM"
+  },
+  {
+    "_id": 2,
+    "name": "Jane Smith",
+    "class_name": "Vinyasa Flow",
+    "email": "jane.smith@example.com",
+    "phone": "+1 (555) 234-5678",
+    "time": "12/10, 06:30 PM"
+  },
+  {
+    "_id": 3,
+    "name": "David Johnson",
+    "class_name": "Power Yoga",
+    "email": "david.johnson@example.com",
+    "phone": "+1 (555) 345-6789",
+    "time": "14/10, 05:00 PM"
+  },
+  {
+    "_id": 4,
+    "name": "Emily Wilson",
+    "class_name": "Kundalini Yoga",
+    "email": "emily.wilson@example.com",
+    "phone": "+1 (555) 456-7890",
+    "time": "15/10, 09:00 AM"
+  }
+]

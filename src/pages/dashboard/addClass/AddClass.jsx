@@ -45,7 +45,7 @@ const AddClass = () => {
       setInstructors(fetchedInstructors);
     }
     fetchInstructor();
-  }, [instructors])
+  }, [])
 
   /* Fetching Classes */
   useEffect(() => {
@@ -55,7 +55,7 @@ const AddClass = () => {
       setClasses(fetchedClasses);
     }
     fetchClasses();
-  }, [classes])
+  }, [])
 
   /* Handling Change value of Input Fields */
   const handleChange = (e) => {
@@ -72,10 +72,32 @@ const AddClass = () => {
   }
 
   /* Handling Add a New Class */
-  const handleAddClass = async () => { }
+  const handleAddClass = async (e) => {
+    e.preventDefault();
+    console.log(classData);
+    if (!classData.name || !classData.description || !classData.instructor || !classData.fees || !classData.time || classData.days.length === 0) {
+      return window.alert("Fill All Data");
+    }
+    try {
+      const res = await fetch("https://yoga-unity.onrender.com/api/classes", {
+        method: "POST",
+        credentials:"include",
+        headers: {
+          "Content-type": "application/json"
+        },
+        body: JSON.stringify(classData)
+      });
+      const data = await res.json();
+      console.log(data)
+    } catch (error) {
+      console.log(error)
+    }
+  }
 
   /* Handling Upddate a Class */
-  const handleUpdateClass = async (id) => { }
+  const handleUpdateClass = async (e) => {
+
+  }
 
   /* Handling Deleting a Class */
   const handleDeleteClass = async (id) => { }
@@ -95,7 +117,7 @@ const AddClass = () => {
         <div>
           <form
             className="flex flex-col gap-8"
-            onSubmit={isUpdateMode ? handleUpdateClass : handleAddClass}
+            onSubmit={isUpdateMode ? (e) => handleUpdateClass(e) : handleAddClass}
           >
             <div className="flex flex-col gap-1">
               <span className="font-bold text-xl flex items-center gap-1"><MdDriveFileRenameOutline />Class Name</span>

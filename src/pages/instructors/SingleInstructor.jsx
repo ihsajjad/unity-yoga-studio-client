@@ -4,17 +4,17 @@ import { RiFacebookCircleFill, RiInstagramFill } from 'react-icons/ri';
 
 const singleInstructor = ({ instructor }) => {
 
-    const { id, name, specialization, bio, email, phone, website, image, reviews, social_media, teaching_philosophy } = instructor;
+    const { id, name, specialization, bio, email, phone, website, image, reviews, teaching_philosophy } = instructor;
     // console.log(social_media.facebook)
     return (
         <div className="card w-full bg-base-100 shadow-xl gap-10 h-full justify-between ">
             <div>
                 <figure><img className='p-5 md:h-96 h-[50vh]' src={image} alt="instructor" /></figure>
-                <div className='absolute left-1/2 transform -translate-x-1/2 flex gap-4'>
+                {/* <div className='absolute left-1/2 transform -translate-x-1/2 flex gap-4'>
                     <a href={social_media.facebook}><RiFacebookCircleFill size={35} className="text-[#1877f2]" /></a>
                     <a href={social_media.instagram}><RiInstagramFill size={35} className="text-[#e1306c]" /></a>
                     <a href={social_media.twitter}><AiFillTwitterCircle size={35} className="text-[#1da1f2]" /></a>
-                </div>
+                </div> */}
             </div>
             <div className="card-body">
                 <h2 className="card-title font-bold text-3xl border-t-2 pt-3 text-[var(--secondary-color)] border-[var(--main-color)]">{name}</h2>
