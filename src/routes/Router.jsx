@@ -11,6 +11,7 @@ import Dashboard from "../layouts/Dashboard";
 import AddClass from "../pages/dashboard/addClass/AddClass";
 import AddInstructor from "../pages/dashboard/addInstructor/AddInstructor";
 import AddEvent from "../pages/dashboard/addEvent/AddEvent";
+import ShshowBookedClassow from "../pages/dashboard/showBookedClass/showBookedClass"
 import Blog from "../pages/blog/blog/Blog";
 import Login from "../pages/login/Login";
 import SignUp from "../pages/SignUp/SignUp";
@@ -70,6 +71,10 @@ export const router = createBrowserRouter([
         path: "/dashboard/add-event",
         element: <AddEvent />,
       },
+      {
+        path: "/dashboard/booked-classes",
+        element: <ShshowBookedClassow/>
+      }
     ],
   },
   {
