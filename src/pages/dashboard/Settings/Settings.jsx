@@ -99,7 +99,7 @@ const Settings = () => {
                         <textarea className="textarea textarea-bordered" placeholder="enter hero sections heading"></textarea>
                     </div>
                     <div className="form-control mt-6 w-1/5">
-                        <button className="items-end border-2 border-[var(--secondary-color)] md:py-2 py-1 md:px-3 px-2 rounded-full bg-[var(--secondary-color)] text-white hover:bg-transparent hover:text-[var(--secondary-color)] font-semibold duration-300 w-full justify-end" type="submit">Add Sub-heading</button>
+                        <button className="items-center border-2 border-[var(--secondary-color)] md:py-2 py-1 md:px-3 px-2 rounded-full bg-[var(--secondary-color)] text-white hover:bg-transparent hover:text-[var(--secondary-color)] font-semibold duration-300 w-full" type="submit">Add Sub-heading</button>
                     </div>
                 </div>
             </form>
