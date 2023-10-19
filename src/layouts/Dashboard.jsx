@@ -30,6 +30,7 @@ function Dashboard(props) {
     { path: "/add-instructor", label: "Add Instructor" },
     { path: "/add-event", label: "Add Event" },
     { path: "/booked-classes", label: "Booked Classes" },
+    { path: "/settings", label: "Settings" },
   ];
 
   const drawer = (

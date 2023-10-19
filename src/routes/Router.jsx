@@ -16,6 +16,7 @@ import Blog from "../pages/blog/blog/Blog";
 import Login from "../pages/login/Login";
 import SignUp from "../pages/SignUp/SignUp";
 import ErrorPage from "../pages/ErrorPage/ErrorPage";
+import Settings from "../pages/dashboard/Settings/Settings";
 
 export const router = createBrowserRouter([
   {
@@ -74,6 +75,10 @@ export const router = createBrowserRouter([
       {
         path: "/dashboard/booked-classes",
         element: <ShshowBookedClassow/>
+      },
+      {
+        path: "/dashboard/settings",
+        element: <Settings />
       }
     ],
   },
