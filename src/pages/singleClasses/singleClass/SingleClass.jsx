@@ -1,13 +1,14 @@
 import { Rating } from "@smastrom/react-rating";
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import Reviews from "../Reviews";
 import InstructorDetails from "../InstructorDetails";
+import { AuthContext } from "../../../Providers/AuthProvider";
 
 const SingleClass = () => {
   const [singleClass, setSingleClass] = useState({});
   const [instructorData, setInstructorData] = useState({});
-  console.log(singleClass);
+  const { user } = useContext(AuthContext);
   const { url } = useParams();
 
   const {
@@ -64,6 +65,22 @@ const SingleClass = () => {
   );
 
   const instructorRating = total / instructorData?.reviews?.length;
+
+  const handleEnrollClass = async (id) => {
+    const bookingInfo = {
+      displayName: user.displayName,
+      email: user.email,
+      classId: id,
+    }
+    const res = await fetch("https://yoga.asdfrajkumar112.repl.co/booking/create-booking", {
+      method: "POST",
+      headers: {
+        "Content-type": "application/json"
+      },
+      body: JSON.stringify(bookingInfo)
+    });
+    console.log(await res.json())
+  }
 
   return (
     <section className="">
@@ -134,7 +151,7 @@ const SingleClass = () => {
                 {instructorRating}/5
               </span>
             </div>
-            <button className="custom-btn-primary mt-5">Enroll Now</button>
+            <button className="custom-btn-primary mt-5" onClick={() => handleEnrollClass(singleClass._id)}>Enroll Now</button>
           </div>
         </div>
         <div className="flex-1"></div>
