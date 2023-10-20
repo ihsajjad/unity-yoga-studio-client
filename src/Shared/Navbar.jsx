@@ -1,7 +1,12 @@
 import ActiveLink from "../components/ActiveLink/ActiveLink";
 import logo from "../assets/logo.png";
+import { useContext } from "react";
+import { AuthContext } from "../Providers/AuthProvider";
+import { FaBars } from "react-icons/fa";
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
+  const { user, logOut } = useContext(AuthContext);
   // Nav Options are here
   const navItems = (
     <>
@@ -26,28 +31,20 @@ const Navbar = () => {
       <ActiveLink className="text-[var(--primary-text)] " to={"/contact"}>
         Contact Us
       </ActiveLink>
+      {user && (
+        <ActiveLink className="text-[var(--primary-text)] " to={"/dashboard"}>
+          Dashboard
+        </ActiveLink>
+      )}
     </>
   );
 
   return (
-    <div className="navbar max-w-screen-xl mx-auto sticky top-0 bg-base-100 shadow-xl lg:px-10 md:px-5 sm:px-2 z-50">
-      <div className="navbar-start">
+    <div className="navbar max-w-screen-xl mx-auto justify-between sticky top-0 bg-base-100 shadow-xl lg:px-10 md:px-5 sm:px-2 z-50">
+      <div className="">
         <div className="dropdown">
-          <label tabIndex={0} className="btn btn-ghost lg:hidden">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              className="h-5 w-5"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke="currentColor"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth="2"
-                d="M4 6h16M4 12h8m-8 6h16"
-              />
-            </svg>
+          <label tabIndex={0} className="btn btn-ghost md:hidden">
+            <FaBars />
           </label>
           <ul
             tabIndex={0}
@@ -56,12 +53,27 @@ const Navbar = () => {
             {navItems}
           </ul>
         </div>
-        <img src={logo} width={"250px"} alt="Unity Yoga Studio" />
+        <img src={logo} alt="Unity Yoga Studio" className="md:w-60 w-40" />
       </div>
-      <div className="navbar-end hidden lg:flex">
+      <div className=" hidden lg:flex">
         <ul className="menu menu-horizontal px-1 gap-3 items-center font-bold">
           {navItems}
         </ul>
+      </div>
+
+      <div>
+        {user ? (
+          <button
+            onClick={logOut}
+            className="border-2 border-[var(--secondary-color)] rounded-full bg-gray-200 text-[var(--secondary-color)] py-1 px-2 text-sm font-bold"
+          >
+            Log Out
+          </button>
+        ) : (
+          <Link to="/login" className="font-bold">
+            Login
+          </Link>
+        )}
       </div>
     </div>
   );
