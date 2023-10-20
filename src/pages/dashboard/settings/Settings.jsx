@@ -6,7 +6,7 @@ const Settings = () => {
       <div>
         <div>
           <label htmlFor="home-heading" className="font-bold">
-            Home Page Banner Heading :{" "}
+            Home Page Banner Heading :
           </label>
           <div id="home-heading" className="flex">
             <input
