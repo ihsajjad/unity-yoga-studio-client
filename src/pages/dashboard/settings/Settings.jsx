@@ -1,4 +1,28 @@
+import { useState } from "react";
+
 const Settings = () => {
+
+  const [bannerHeading, setBannerHeading] = useState("");
+  const [bannerText, setBannerText] = useState("");
+  const [email, setEmail] = useState("");
+  const [mob, setMob] = useState("");
+  const [adderess, setAdderess] = useState("");
+  const [aboutText, setAboutText] = useState("");
+  const [missionText, setMissionText] = useState("");
+  const [gallaryImage, setGallaryImage] = useState("");
+  const [studioName, setStudioName] = useState("");
+  const [logoImage, setLogoImage] = useState("");
+
+
+  const handleUpdateBannerHeading = async () => { }
+  const handleUpdateBannerText = async () => { }
+  const handleUpdateEmail = async () => { }
+  const handleUpdateMob = async () => { }
+  const handleUpdateAdderess = async () => { }
+  const handleUpdateAboutText = async () => { }
+  const handleUpdateMissionText = async () => { }
+  const handleUpdateStudioName = async () => { }
+
   return (
     <div>
       <h1 className="text-center md:text-4xl text-3xl text-[var(--secondary-color)] font-bold">Add Events</h1>
@@ -13,10 +37,11 @@ const Settings = () => {
               </label>
               <div id="home-heading" className="flex">
                 <input
+                  onChange={(e) => setBannerHeading(e.target.value)}
                   type="text"
                   className="w-full border-2 border-[var(--secondary-color)] py-1 px-2 outline-none rounded-l"
                 />{" "}
-                <button className="bg-[var(--secondary-color)] -ml-2 text-white p-1 px-2 rounded-r">
+                <button onClick={handleUpdateBannerHeading} className="bg-[var(--secondary-color)] -ml-2 text-white p-1 px-2 rounded-r">
                   Save
                 </button>
               </div>
@@ -29,11 +54,12 @@ const Settings = () => {
               </label>
               <div id="home-heading" className="flex">
                 <textarea
+                  onChange={(e) => setBannerText(e.target.value)}
                   rows={3}
                   type="text"
                   className="w-full border-2 border-[var(--secondary-color)] py-1 px-2 outline-none rounded-l"
                 />{" "}
-                <button className="bg-[var(--secondary-color)] -ml-2 text-white p-1 px-2 rounded-r">
+                <button onClick={handleUpdateBannerText} className="bg-[var(--secondary-color)] -ml-2 text-white p-1 px-2 rounded-r">
                   Save
                 </button>
               </div>
@@ -52,10 +78,11 @@ const Settings = () => {
               </label>
               <div id="home-heading" className="flex">
                 <input
+                  onChange={(e) => setEmail(e.target.value)}
                   type="text"
                   className="w-full border-2 border-[var(--secondary-color)] py-1 px-2 outline-none rounded-l"
                 />{" "}
-                <button className="bg-[var(--secondary-color)] -ml-2 text-white p-1 px-2 rounded-r">
+                <button onClick={handleUpdateEmail} className="bg-[var(--secondary-color)] -ml-2 text-white p-1 px-2 rounded-r">
                   Save
                 </button>
               </div>
@@ -68,10 +95,11 @@ const Settings = () => {
               </label>
               <div id="home-heading" className="flex">
                 <input
+                  onChange={(e) => setMob(e.target.value)}
                   type="text"
                   className="w-full border-2 border-[var(--secondary-color)] py-1 px-2 outline-none rounded-l"
                 />{" "}
-                <button className="bg-[var(--secondary-color)] -ml-2 text-white p-1 px-2 rounded-r">
+                <button onClick={handleUpdateMob} className="bg-[var(--secondary-color)] -ml-2 text-white p-1 px-2 rounded-r">
                   Save
                 </button>
               </div>
@@ -84,10 +112,11 @@ const Settings = () => {
               </label>
               <div id="home-heading" className="flex">
                 <input
+                  onChange={(e) => setAdderess(e.target.value)}
                   type="text"
                   className="w-full border-2 border-[var(--secondary-color)] py-1 px-2 outline-none rounded-l"
                 />{" "}
-                <button className="bg-[var(--secondary-color)] -ml-2 text-white p-1 px-2 rounded-r">
+                <button onClick={handleUpdateAdderess} className="bg-[var(--secondary-color)] -ml-2 text-white p-1 px-2 rounded-r">
                   Save
                 </button>
               </div>
@@ -106,11 +135,12 @@ const Settings = () => {
               </label>
               <div id="home-heading" className="flex">
                 <textarea
+                  onChange={(e) => setAboutText(e.target.value)}
                   rows={3}
                   type="text"
                   className="w-full border-2 border-[var(--secondary-color)] py-1 px-2 outline-none rounded-l"
                 />{" "}
-                <button className="bg-[var(--secondary-color)] -ml-2 text-white p-1 px-2 rounded-r">
+                <button onClick={handleUpdateAboutText} className="bg-[var(--secondary-color)] -ml-2 text-white p-1 px-2 rounded-r">
                   Save
                 </button>
               </div>
@@ -123,11 +153,12 @@ const Settings = () => {
               </label>
               <div id="home-heading" className="flex">
                 <textarea
+                  onChange={(e) => setMissionText(e.target.value)}
                   rows={3}
                   type="text"
                   className="w-full border-2 border-[var(--secondary-color)] py-1 px-2 outline-none rounded-l"
                 />{" "}
-                <button className="bg-[var(--secondary-color)] -ml-2 text-white p-1 px-2 rounded-r">
+                <button onClick={handleUpdateMissionText} className="bg-[var(--secondary-color)] -ml-2 text-white p-1 px-2 rounded-r">
                   Save
                 </button>
               </div>
@@ -162,10 +193,11 @@ const Settings = () => {
               </label>
               <div id="home-heading" className="flex">
                 <input
+                  onChange={(e) => setStudioName(e.target.value)}
                   type="text"
                   className="w-full border-2 border-[var(--secondary-color)] py-1 px-2 outline-none rounded-l"
                 />{" "}
-                <button className="bg-[var(--secondary-color)] -ml-2 text-white p-1 px-2 rounded-r">
+                <button onClick={handleUpdateStudioName} className="bg-[var(--secondary-color)] -ml-2 text-white p-1 px-2 rounded-r">
                   Save
                 </button>
               </div>
