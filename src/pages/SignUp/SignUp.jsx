@@ -91,14 +91,10 @@ const SignUp = () => {
 
           <input
             type="file"
-            // {...register("photoURL")}
             onChange={(e) => handlePhotoUpload(e.target.files[0])}
             placeholder="Photo URL"
             className="file-input file-input-bordered m w-full"
           />
-          {/* {errors.photoURL && (
-            <span className=" text-red-500">Photo URL is required.</span>
-          )} */}
 
           <input
             type="email"

@@ -1,22 +1,38 @@
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
+import { useState } from "react";
+import { FaEdit } from "react-icons/fa";
+import { MdDelete } from "react-icons/md";
 
 const image_hosting_token = import.meta.env.VITE_Image_Upload_Token;
 
 const AddInstructor = () => {
   const [instructorData, setInstructorData] = useState({
-    name: null,
-    gender: null,
-    specialization: null,
-    bio: null,
-    teaching_philosophy: null,
-    email: null,
-    phone: null,
-    image:
-      "https://cdn.pixabay.com/photo/2023/08/08/09/20/wedding-8176868_640.jpg",
+    name: "",
+    specialization: "",
+    bio: "",
+    teaching_philosophy: "",
+    email: "",
+    phone: "",
+    image: "",
   });
+  const [response, setResponse] = useState("");
+  const [instructors, setInstructors] = useState([]);
+  const [isUpdateMode, setIsUpdateMode] = useState(false);
+  const [refetch, setRefetch] = useState(false);
+
+  /* Fetching Instructors */
+  useEffect(() => {
+    const fetchInstructor = async () => {
+      const res = await fetch(
+        "https://yoga.asdfrajkumar112.repl.co/instructor/show-instructors"
+      );
+      const fetchedInstructors = await res.json();
+      setInstructors(fetchedInstructors);
+    };
+    fetchInstructor();
+  }, [refetch]);
 
   const img_hosting_URL = `https://api.imgbb.com/1/upload?key=${image_hosting_token}`;
-
   /* Handling Uploading Image */
   const handleImage = async (e) => {
     const image = e.target.files;
@@ -33,9 +49,8 @@ const AddInstructor = () => {
 
       if (imgResponse.ok) {
         const imgData = await imgResponse.json();
-        console.log(imgData.data.display_url);
         setInstructorData((p) => ({
-          ...instructorData,
+          ...p,
           image: imgData.data.display_url,
         }));
       } else {
@@ -48,31 +63,10 @@ const AddInstructor = () => {
     const name = e.target.name;
     const value = e.target.value;
     setInstructorData({ ...instructorData, [name]: value });
-    console.log(instructorData);
-  };
-
-  const handleSelectGender = (e) => {
-    var e = document.getElementById("gender");
-    var value = e.value;
-    var text = e.options[e.selectedIndex].text;
-    setInstructorData({ ...instructorData, gender: value });
   };
 
   const handleAddingInstructor = async () => {
-    if (
-      !instructorData.name ||
-      !instructorData.gender ||
-      !instructorData.specialization ||
-      !instructorData.bio ||
-      !instructorData.teaching_philosophy ||
-      !instructorData.email ||
-      !instructorData.phone
-    ) {
-      return window.alert("Fill Complete Data");
-    }
-    if (instructorData.phone.length < 10) {
-      return window.alert("Mobile Number is not valid");
-    }
+    setResponse("");
     try {
       const res = await fetch(
         "https://yoga.asdfrajkumar112.repl.co/instructor/create-instructor",
@@ -85,124 +79,217 @@ const AddInstructor = () => {
         }
       );
       const data = await res.json();
-      console.log(data);
+      setResponse(data);
+      setRefetch((p) => !p);
     } catch (error) {
       console.log(error);
+    }
+  };
+
+  const handleDeleteInstructor = (id) => {
+    fetch(
+      `https://yoga.asdfrajkumar112.repl.co/instructor/delete-instructor/${id}`,
+      {
+        method: "DELETE",
+      }
+    )
+      .then((res) => res.json())
+      .then((data) => {
+        if (data) {
+          setRefetch((p) => !p);
+        }
+      });
+  };
+
+  /* Select Update Mode */
+  const selectUpdateModeClass = async (instructorName) => {
+    const res = await fetch(
+      `https://yoga.asdfrajkumar112.repl.co/instructor/show-instructor-by-name/${instructorName}`
+    );
+    const data = await res.json();
+    setInstructorData(data);
+    setIsUpdateMode(true);
+  };
+
+  const handleUpdateInstructor = async () => {
+    const res = await fetch(
+      `https://yoga.asdfrajkumar112.repl.co/instructor/update-instructor/${instructorData.id}`,
+      {
+        method: "PUT",
+        headers: {
+          "content-type": "application/json",
+        },
+        body: JSON.stringify(instructorData),
+      }
+    );
+    const data = await res.json();
+    if (data) {
+      setRefetch((p) => !p);
     }
   };
 
   return (
     <div>
       <h1 className="font-bold text-[var(--secondary-color)] text-center text-4xl">
-        Add Instructor
+        {isUpdateMode ? "Update" : "Add"} Instructor
       </h1>
-      <div className="">
-        {/* new instructors form */}
-        <div>
-          <div className="card-body">
-            <div className="form-control">
-              <label className="label">
-                <span className="text-xl font-bold">Instructors Name</span>
-              </label>
-              <input
-                type="text"
-                placeholder="instructors name"
-                className=" border-b-2 border-[var(--secondary-color)]"
-                name="name"
-                onChange={handleInputChange}
-              />
-            </div>
-            <div className="form-control">
-              <label className="label">
-                <span className="text-xl font-bold">Gender</span>
-              </label>
-              <select
-                className="select border-2 border-[var(--secondary-color)] w-full"
-                id="gender"
-                onChange={handleSelectGender}
+      <div className="flex lg:flex-row flex-col">
+        <div className="lg:w-8/12">
+          {/* new instructors form */}
+          <div>
+            <div className="card-body">
+              <div className="form-control">
+                <label className="label">
+                  <span className="text-xl font-bold">Instructors Name</span>
+                </label>
+                <input
+                  type="text"
+                  placeholder="instructors name"
+                  className=" border-b-2 border-[var(--secondary-color)]"
+                  defaultValue={instructorData.name}
+                  name="name"
+                  onChange={handleInputChange}
+                />
+              </div>
+
+              <div className="form-control">
+                <label className="label">
+                  <span className="text-xl font-bold">Specialization</span>
+                </label>
+                <input
+                  type="text"
+                  placeholder="Specialization"
+                  defaultValue={instructorData.specialization}
+                  className=" border-b-2 border-[var(--secondary-color)]"
+                  name="specialization"
+                  onChange={handleInputChange}
+                />
+              </div>
+              <div className="form-control">
+                <label className="label">
+                  <span className="text-xl font-bold">Bio</span>
+                </label>
+                <textarea
+                  className="textarea border-2 border-[var(--secondary-color)]"
+                  placeholder="Bio"
+                  name="bio"
+                  defaultValue={instructorData.bio}
+                  onChange={handleInputChange}
+                ></textarea>
+              </div>
+              <div>
+                <input
+                  type="file"
+                  defaultValue={instructorData.image}
+                  className="file-input file-input-bordered file-input-primary w-full max-w-xs"
+                  onChange={handleImage}
+                />
+              </div>
+              <div className="form-control">
+                <label className="label">
+                  <span className="text-xl font-bold">Teaching Philosofy</span>
+                </label>
+                <input
+                  type="text"
+                  placeholder="Teaching Philosofy"
+                  defaultValue={instructorData.teaching_philosophy}
+                  className=" border-b-2 border-[var(--secondary-color)]"
+                  name="teaching_philosophy"
+                  onChange={handleInputChange}
+                />
+              </div>
+              <div className="form-control">
+                <label className="label">
+                  <span className="text-xl font-bold">Email</span>
+                </label>
+                <input
+                  type="text"
+                  placeholder="Email"
+                  defaultValue={instructorData.email}
+                  className=" border-b-2 border-[var(--secondary-color)]"
+                  name="email"
+                  onChange={handleInputChange}
+                />
+              </div>
+              <div className="form-control">
+                <label className="label">
+                  <span className="text-xl font-bold">Phone</span>
+                </label>
+                <input
+                  type="text"
+                  placeholder="Phone"
+                  defaultValue={instructorData.phone}
+                  className=" border-b-2 border-[var(--secondary-color)]"
+                  name="phone"
+                  onChange={handleInputChange}
+                />
+              </div>
+              {response && (
+                <span
+                  className={`${
+                    response?.message.includes("successfully")
+                      ? "text-green-500"
+                      : "bg-red-500"
+                  } font-bold`}
+                >
+                  {response?.message}
+                </span>
+              )}
+              <button
+                className="custom-btn-secondary self-center w-[10rem]"
+                type="submit"
+                onClick={
+                  isUpdateMode ? handleUpdateInstructor : handleAddingInstructor
+                }
               >
-                <option disabled>Select</option>
-                <option value="male">Male</option>
-                <option value="female">Female</option>
-              </select>
+                {isUpdateMode ? "Update" : "Add"}
+              </button>
             </div>
-            <div className="form-control">
-              <label className="label">
-                <span className="text-xl font-bold">Specialization</span>
-              </label>
-              <input
-                type="text"
-                placeholder="specialization"
-                className=" border-b-2 border-[var(--secondary-color)]"
-                name="specialization"
-                onChange={handleInputChange}
-              />
-            </div>
-            <div className="form-control">
-              <label className="label">
-                <span className="text-xl font-bold">Bio</span>
-              </label>
-              <textarea
-                className="textarea border-2 border-[var(--secondary-color)]"
-                placeholder="Bio"
-                name="bio"
-                onChange={handleInputChange}
-              ></textarea>
-            </div>
-            <div>
-              <input
-                type="file"
-                className="file-input file-input-bordered file-input-primary w-full max-w-xs"
-                onChange={handleImage}
-              />
-            </div>
-            <div className="form-control">
-              <label className="label">
-                <span className="text-xl font-bold">Teaching Philosofy</span>
-              </label>
-              <input
-                type="text"
-                placeholder="teaching philosofy"
-                className=" border-b-2 border-[var(--secondary-color)]"
-                name="teaching_philosophy"
-                onChange={handleInputChange}
-              />
-            </div>
-            <div className="form-control">
-              <label className="label">
-                <span className="text-xl font-bold">Email</span>
-              </label>
-              <input
-                type="text"
-                placeholder="email"
-                className=" border-b-2 border-[var(--secondary-color)]"
-                name="email"
-                onChange={handleInputChange}
-              />
-            </div>
-            <div className="form-control">
-              <label className="label">
-                <span className="text-xl font-bold">Phone</span>
-              </label>
-              <input
-                type="text"
-                placeholder="phone"
-                className=" border-b-2 border-[var(--secondary-color)]"
-                name="phone"
-                onChange={handleInputChange}
-              />
-            </div>
-            <button
-              className="custom-btn-secondary self-center w-[10rem]"
-              type="submit"
-              onClick={handleAddingInstructor}
-            >
-              Add
-            </button>
           </div>
+          {/* present instructors */}
+          <div></div>
         </div>
-        {/* present instructors */}
-        <div></div>
+
+        {/* Instructors Section Starts Here */}
+        <div className=" h-auto lg:w-4/12 px-4 flex flex-col items-center gap-2">
+          {instructors.length > 0 &&
+            instructors?.map((instructor, i) => {
+              return (
+                <div
+                  key={i}
+                  className="w-[20rem] border-2 border-[var(--secondary-color)] rounded-md p-2"
+                >
+                  <div className="flex gap-2">
+                    <img
+                      src={instructor.image}
+                      alt=""
+                      className="w-12 h-12 rounded-full"
+                    />
+                    <div>
+                      <h2 className="text-lg font-bold">{instructor.name}</h2>
+                      <p>{instructor.email}</p>
+                    </div>
+                  </div>
+                  <p className="">
+                    {instructor.bio.slice(0, 100)}
+                    {instructor.bio.length > 100 && "..."}
+                  </p>
+                  <div className="flex items-center justify-end gap-2">
+                    <FaEdit
+                      onClick={() => selectUpdateModeClass(instructor.name)}
+                      size={32}
+                      className="cursor-pointer text-green-700 hover:text-[var(--secondary-color)]"
+                    />
+                    <MdDelete
+                      onClick={() => handleDeleteInstructor(instructor.id)}
+                      size={32}
+                      className="cursor-pointer text-red-700 hover:text-[var(--secondary-color)]"
+                    />
+                  </div>
+                </div>
+              );
+            })}
+        </div>
       </div>
     </div>
   );

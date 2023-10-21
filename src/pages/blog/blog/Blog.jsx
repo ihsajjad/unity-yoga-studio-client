@@ -7,7 +7,7 @@ const Blog = () => {
   useEffect(() => {
     const loadBlogs = async () => {
       const res = await fetch(
-        "https://yoga.asdfrajkumar112.repl.co/blog/show-blogs"
+        "https://yoga.asdfrajkumar112.repl.co/blog/show-blog-info"
       );
       const data = await res.json();
       setBlogs(data);

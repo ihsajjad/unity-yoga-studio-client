@@ -33,10 +33,10 @@ const InstructorDetails = ({ instructorData, ratings }) => {
 
         {/* instructor's img */}
         <div
-          className={`relative bg-[url(https://svgshare.com/i/xwk.svg)] md:bg-cover bg-no-repeat overflow-hidden md:flex-1 w-full  flex items-center justify-center h-fit`}
+          className={`relative overflow-hidden md:flex-1 w-full  flex items-center justify-center h-fit`}
           id="instructor-img-container"
         >
-          <img src={instructorData.image} alt="" className=" object-cover" />
+          <img src={instructorData.image} alt="" className="object-cover" />
         </div>
         <div className="md:absolute top-0 left-1/3 md:w-1/4 rounded bg-slate-300 p-2 flex gap-2 mb-3">
           <FaQuoteLeft className="w-24 text-2xl text-[var(--secondary-color)] text-justify" />
