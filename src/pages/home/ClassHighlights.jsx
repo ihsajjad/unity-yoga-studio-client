@@ -5,9 +5,29 @@ const ClassHighlights = () => {
   const [classes, setClasses] = useState([]);
 
   useEffect(() => {
-    fetch("classes.json")
-      .then((res) => res.json())
-      .then((data) => setClasses(data));
+    const loadData = async () => {
+      const res = await fetch(
+        "https://yoga.asdfrajkumar112.repl.co/class/show-classes"
+      );
+      const classes = await res.json();
+
+      // let classArray = [];
+
+      const fetchPromises = classes?.map(async (item) => {
+        const res = await fetch(
+          `https://yoga.asdfrajkumar112.repl.co/instructor/show-instructor-name-and-image/${item.instructor}`
+        );
+        const data = await res.json();
+        if (data) {
+          return { ...item, instructorImg: data.image };
+        }
+      });
+      const classArray = await Promise.all(fetchPromises);
+      console.log(classArray);
+      setClasses(classArray);
+    };
+
+    loadData();
   }, []);
 
   return (
@@ -29,14 +49,14 @@ const ClassHighlights = () => {
                   className="card-bg w-full h-56 object-cover rounded-lg "
                 />
               </figure>
-              <div className="w-28 h-28 absolute -bottom-12 rounded-full left-1/3 z-10 overflow-hidden border-4 border-white">
+              <div className="w-28 h-28 absolute -bottom-12 rounded-full left-1/3 z-10 overflow-hidden border-4 border-[var(--main-color)]">
                 <img
-                  src={singleClass.instructor.imgUrl}
+                  src={singleClass.instructorImg}
                   alt=""
-                  className="w-full h-full object-cover rounded-full absolute -z-10"
+                  className="w-full h-full object-contain rounded-full absolute -z-10 bg-[var(--secondary-color)]"
                 />
                 <div className="w-full h-full absolute bottom-28 text-center flex items-center justify-center text-[white] font-bold bg-[#644b76] bg-opacity-70 rounded-img-container duration-700">
-                  <span className="">{singleClass.instructor.name}</span>
+                  <span className="">{singleClass.instructor}</span>
                 </div>
               </div>
             </div>
@@ -47,7 +67,7 @@ const ClassHighlights = () => {
             {/* Card footer */}
             <div className="flex justify-center mt-auto border-t-2 border-[var(--main-color)] pt-2">
               <Link
-                to={`/classes/${singleClass.url}`}
+                to={`/class/${singleClass.url}`}
                 className="custom-btn-primary"
               >
                 View Details

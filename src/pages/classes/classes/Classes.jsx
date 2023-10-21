@@ -9,9 +9,15 @@ const Classes = () => {
   const [level, setLevel] = useState("All");
 
   useEffect(() => {
-    fetch("classes.json")
-      .then((res) => res.json())
-      .then((data) => setClasses(data));
+    const loadData = async () => {
+      const res = await fetch(
+        "https://yoga.asdfrajkumar112.repl.co/class/show-classes"
+      );
+      const data = await res.json();
+      setClasses(data);
+    };
+
+    loadData();
   }, []);
 
   useEffect(() => {

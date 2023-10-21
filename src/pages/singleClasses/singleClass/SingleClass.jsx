@@ -16,29 +16,26 @@ const SingleClass = () => {
     name,
     description,
     // img,
-    days,
     fees,
     duration,
-    schedule,
-    location,
-    level,
     time,
+    level,
     max_students,
+    days,
     // class_size,
     // class_type,
     instructor,
-    ratings,
-    reviews,
   } = singleClass;
 
+  const ratings = 4;
+  const reviews = [];
   useEffect(() => {
     const loadData = async () => {
-      const res = await fetch("/classes.json");
+      const res = await fetch(
+        `https://yoga.asdfrajkumar112.repl.co/class/show-class/${url}`
+      );
       const data = await res.json();
-      if (data) {
-        const matched = data.find((item) => item.url === url);
-        setSingleClass(matched);
-      }
+      setSingleClass(data);
     };
 
     loadData();
@@ -46,47 +43,48 @@ const SingleClass = () => {
 
   useEffect(() => {
     const loadData = async () => {
-      const res = await fetch("/instructors.json");
+      const res = await fetch(
+        `https://yoga.asdfrajkumar112.repl.co/instructor/show-instructor-by-name/${instructor}`
+      );
       const data = await res.json();
-      if (data && instructor?.email) {
-        const matched = data.find((item) => item?.email === instructor?.email);
-        setInstructorData(matched);
-      }
+      instructor && setInstructorData(data);
     };
 
-    instructor?.email && loadData();
+    instructor && loadData();
   }, [instructor]);
 
-  console.log(singleClass);
+  // const total = instructorData?.reviews?.reduce(
+  //   (initial, item) => initial + item.rating,
+  //   0
+  // );
 
-  const total = instructorData?.reviews?.reduce(
-    (initial, item) => initial + item.rating,
-    0
-  );
-
-  const instructorRating = total / instructorData?.reviews?.length;
+  // const instructorRating = total / instructorData?.reviews?.length;
+  const instructorRating = 4;
 
   const handleEnrollClass = async (id) => {
     const bookingInfo = {
       displayName: user.displayName,
       email: user.email,
       classId: id,
-    }
-    const res = await fetch("https://yoga.asdfrajkumar112.repl.co/booking/create-booking", {
-      method: "POST",
-      headers: {
-        "Content-type": "application/json"
-      },
-      body: JSON.stringify(bookingInfo)
-    });
-    console.log(await res.json())
-  }
+    };
+    const res = await fetch(
+      "https://yoga.asdfrajkumar112.repl.co/booking/create-booking",
+      {
+        method: "POST",
+        headers: {
+          "Content-type": "application/json",
+        },
+        body: JSON.stringify(bookingInfo),
+      }
+    );
+    const data = await res.json();
+    console.log(data);
+  };
 
   return (
     <section className="">
       <div className="md:flex gap-2 md:min-h-[80vh] relative rounded overflow-hidden">
         <img
-          // src={img}
           src={
             "https://images.pexels.com/photos/18221637/pexels-photo-18221637/free-photo-of-young-woman-standing-on-one-leg-on-mountain-in-rishikesh-india.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
           }
@@ -111,16 +109,16 @@ const SingleClass = () => {
               <div className="font-bold flex md:flex-row flex-col gap-2">
                 <span className="inline-block">Class Days :</span>
                 <div className="flex gap-2 flex-wrap w-3/4 pr-5">
-                  {days?.map((day) => (
-                    <span
-                      key={day}
-                      className="bg-[var(--main-color)] p-1 rounded text-[var(--secondary-color)]"
-                    >
-                      {day}
-                    </span>
-                  ))}
+                  {days &&
+                    days?.map((day) => (
+                      <span
+                        key={day}
+                        className="bg-[var(--main-color)] p-1 rounded text-[var(--secondary-color)]"
+                      >
+                        {day}
+                      </span>
+                    ))}
                 </div>
-                {schedule}
               </div>
               <p className="font-bold">
                 <span>Time : </span>
@@ -129,9 +127,6 @@ const SingleClass = () => {
               <p className="font-bold">
                 <span>Maximum students : </span>
                 {max_students}
-              </p>
-              <p className="font-bold">
-                <span>Location : </span> {location}
               </p>
             </div>
           </div>
@@ -151,7 +146,12 @@ const SingleClass = () => {
                 {instructorRating}/5
               </span>
             </div>
-            <button className="custom-btn-primary mt-5" onClick={() => handleEnrollClass(singleClass._id)}>Enroll Now</button>
+            <button
+              className="custom-btn-primary mt-5"
+              onClick={() => handleEnrollClass(singleClass._id)}
+            >
+              Enroll Now
+            </button>
           </div>
         </div>
         <div className="flex-1"></div>

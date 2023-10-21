@@ -3,6 +3,9 @@ import { useRef } from "react";
 import JoditEditor from "jodit-react";
 import { Link } from "react-router-dom";
 import Preview from "./Preview";
+import { useEffect } from "react";
+import { FaEdit } from "react-icons/fa";
+import { MdDelete } from "react-icons/md";
 
 const AddBlog = () => {
   const editorRef = useRef(null);
@@ -21,6 +24,19 @@ const AddBlog = () => {
     url: "",
   });
   const [slug, setSlug] = useState("");
+  const [blogs, setBlogs] = useState([]);
+
+  useEffect(() => {
+    const loadBlogs = async () => {
+      const res = await fetch(
+        "https://yoga.asdfrajkumar112.repl.co/blog/show-blog-info"
+      );
+      const data = await res.json();
+      setBlogs(data);
+    };
+
+    loadBlogs();
+  }, []);
 
   // image hosting URL
   const img_hosting_URL = `https://api.imgbb.com/1/upload?key=${
@@ -121,7 +137,7 @@ const AddBlog = () => {
             className="border p-1"
             onChange={(e) => handlePhotoUpload(e.target.files[0])}
           />
-          {error.includes("image") && (
+          {error && error.includes("image") && (
             <span className="text-red-500">{error}</span>
           )}
         </div>
@@ -181,6 +197,45 @@ const AddBlog = () => {
         } w-screen min-h-screen bg-slate-600 z-30  top-0 right-0 bg-opacity-40`}
       >
         <Preview blog={blog} setOpenPreview={setOpenPreview} />
+      </div>
+
+      {/* Existing blogs */}
+      <div className="my-12">
+        <h3 className="section-title">Existing Blogs</h3>
+        <div className="grid lg:grid-cols-3 sm:grid-cols-2 grid-cols-1 md:gap-8 gap-5">
+          {blogs.map((blog) => (
+            <div
+              key={blog.id}
+              className="flex flex-col gap-2 border border-[var(--secondary-color)] rounded-lg p-3"
+            >
+              <div className="">
+                <img src={blog.image} alt="" className="w-full rounded-lg" />
+              </div>
+
+              <div className="flex-grow">
+                <h3 className="text-xl">{blog.title}</h3>
+              </div>
+              <div className="flex items-center justify-between gap-2">
+                <Link
+                  to={`/blog/${blog?.url}`}
+                  className="custom-btn-secondary w-fit text-sm"
+                >
+                  Read More
+                </Link>
+                <FaEdit
+                  // onClick={() => selectUpdateModeClass(Class.url)}
+                  size={32}
+                  className="cursor-pointer text-green-700 hover:text-[var(--secondary-color)]"
+                />
+                <MdDelete
+                  // onClick={() => handleDeleteClass(Class.id)}
+                  size={32}
+                  className="cursor-pointer text-red-700 hover:text-[var(--secondary-color)]"
+                />
+              </div>
+            </div>
+          ))}
+        </div>
       </div>
     </div>
   );
