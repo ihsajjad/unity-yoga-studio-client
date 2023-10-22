@@ -11,9 +11,11 @@ import Dashboard from "../layouts/Dashboard";
 import AddClass from "../pages/dashboard/addClass/AddClass";
 import AddInstructor from "../pages/dashboard/addInstructor/AddInstructor";
 import AddEvent from "../pages/dashboard/addEvent/AddEvent";
-import ShshowBookedClassow from "../pages/dashboard/showBookedClass/showBookedClass"
+import ShshowBookedClassow from "../pages/dashboard/showBookedClass/showBookedClass";
 import Blog from "../pages/blog/blog/Blog";
-import Login from "../pages/login/Login";
+import AddBlog from "../pages/dashboard/addBlog/AddBlog";
+import Messages from "../pages/dashboard/messages/Messages";
+// import Settings from "../pages/dashboard/settings/Settings";
 import SignUp from "../pages/SignUp/SignUp";
 import ErrorPage from "../pages/ErrorPage/ErrorPage";
 import Settings from "../pages/dashboard/Settings/Settings";
@@ -54,6 +56,18 @@ export const router = createBrowserRouter([
         path: "/blog",
         element: <Blog />,
       },
+      {
+        path: "/blog/:url",
+        element: <SingleBlog />,
+      },
+      {
+        path: "/login",
+        element: <Login />,
+      },
+      {
+        path: "/sign-up",
+        element: <SignUp />,
+      },
     ],
   },
   {
@@ -73,21 +87,21 @@ export const router = createBrowserRouter([
         element: <AddEvent />,
       },
       {
+        path: "/dashboard/add-blog",
+        element: <AddBlog />,
+      },
+      {
         path: "/dashboard/booked-classes",
-        element: <ShshowBookedClassow/>
+        element: <ShshowBookedClassow />,
+      },
+      {
+        path: "/dashboard/messages",
+        element: <Messages />,
       },
       {
         path: "/dashboard/settings",
-        element: <Settings />
-      }
+        element: <Settings />,
+      },
     ],
   },
-  {
-    path: "/admin-login",
-    element: <Login />,
-  },
-  {
-    path: '/admin-signup',
-    element: <SignUp />
-  }
 ]);

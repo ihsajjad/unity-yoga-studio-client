@@ -1,6 +1,5 @@
-import React from 'react'
-import ContactForm from '../ContactForm'
-import ContactInfo from "../ContactInfo"
+import ContactForm from "../ContactForm";
+import ContactInfo from "../ContactInfo";
 
 const ContactUs = () => {
   return (
@@ -8,7 +7,7 @@ const ContactUs = () => {
       <ContactForm />
       <ContactInfo />
     </section>
-  )
-}
+  );
+};
 
-export default ContactUs
+export default ContactUs;

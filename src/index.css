@@ -47,6 +47,17 @@ body {
   clip-path: polygon(0 0, 100% 0, 72% 100%, 0% 100%);
 }
 
+.contact-info-card {
+  @apply flex flex-col items-center gap-1 p-2 rounded bg-[#dedede] border-t-4  text-[var(--secondary-color)]  border-red-400 w-[180px] border;
+}
+
+.contact-info-card:nth-child(2) {
+  @apply border-green-400;
+}
+.contact-info-card:nth-child(3) {
+  @apply border-blue-400;
+}
+
 .message-bg {
   clip-path: polygon(
     0% 0%,
@@ -57,6 +68,10 @@ body {
     40% 75%,
     0 74%
   );
+}
+
+.jodit-wysiwyg {
+  min-height: 70vh !important;
 }
 
 .active-day {
@@ -70,4 +85,34 @@ body {
 
 #instructor-img-container {
   background-position: center;
+}
+
+/* Style the vertical scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+/* Style the vertical scrollbar thumb */
+::-webkit-scrollbar-thumb {
+  background-color: var(--secondary-color);
+  border-radius: 5px;
+  box-shadow: 0 0 2px rgba(30, 11, 153, 0.2);
+}
+
+/* Style the horizontal scrollbar */
+::-webkit-scrollbar:horizontal {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: #d0e6ab;
+}
+
+/* Style the horizontal scrollbar thumb */
+::-webkit-scrollbar-thumb:horizontal {
+  background-color: rgb(3, 3, 191);
+  border-radius: 5px;
+  box-shadow: 0 0 2px rgba(0, 0, 0, 0.2);
 }
